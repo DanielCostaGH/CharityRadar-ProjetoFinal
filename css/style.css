@@ -34,7 +34,17 @@ body{
 }
 #switchesButtons{
     background-color: rgb(0, 119, 255);
+    /* teste */
 }
+
+#setaSlide{
+    border-radius: 30px;
+    height: 5vh;
+    width: 3vh;
+    padding: 2vh;
+    /* teste */
+}
+
 .divMain{
     background-color: rgb(241, 241, 241);
     height: 80vh;
