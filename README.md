@@ -1,8 +1,13 @@
-# CharityRadar-ProjetoFinal
-Projeto desenvolvido para uso facultativo.
-
 # Charity Radar
+<p align="center" > 
+<img src="https://github.com/DanielCostaGH/CharityRadar-ProjetoFinal/blob/main/img/logo.png?raw=true"
+</p >
+	<br/>
+	<br/>
+	Projeto desenvolvido para uso facultativo.
+	
 # Sobre o Projeto
+
 
 <h4 align="justify">
 	Com a confecção desse trabalho, temos a ideia de apresentar um projeto no qual possamos vir a facilitar os meios de ajuda social na região ( inicialmente em BH).
@@ -10,10 +15,11 @@ O projeto consiste no ambiente web que sera feito com dois meios para uso, sendo
 Esse projeto foi idealizado, pois o pai de um dos integrantes já contribuía com questões de caridade e relatou dificuldades para promover as mesmas. Sendo assim, pensamos em tentar dar mais visibilidade a essas causas, e por consequência mais facilidade de divulgação delas.
 </h4>
 
+
+
 # Índice/Sumário
 
 * [Sobre](#sobre-o-projeto)
-* [Sumário](#índice/sumário)
 * [Requisitos Funcionais](#requisitos-funcionais)
 * [Tecnologias Usadas](#tecnologias-usadas)
 * [Contribuição](#contribuição)
