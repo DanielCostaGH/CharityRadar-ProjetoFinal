@@ -52,6 +52,13 @@ Leia o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para saber detalhes sobre o no
 # Autores
 
 - [Gladson Ameno Fernandes Silva](https://github.com/GladsonAmeno)
+- [Carlos Roberto](https://github.com/cjribeiro99)
+- [Gustavo Oliveira](https://github.com/gustavo2755)
+- [Matheus Silva](https://github.com/SMtHR)
+- [Guilherme Albuquerque](https://github.com/tigui10)
+- [Arthur Gabriel](https://github.com/Arthur-Gab)
+- [Daniel Francisco](https://github.com/DanielCostaGH)
+- [Arthur Latini](https://github.com/arthurlatini)
 
 # Licença
 
