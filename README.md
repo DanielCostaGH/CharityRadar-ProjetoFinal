@@ -39,11 +39,15 @@ Esse projeto foi idealizado, pois o pai de um dos integrantes já contribuía co
 
 # Tecnologias Usadas
 
-- [Flutter](https://flutter.dev/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [JavaScript](https://www.javascript.com/)
+- [MySql](https://www.mysql.com/)
+- [Figma](https://www.figma.com)
+- [Insomnia](https://insomnia.rest/download)
+
+
+
 
 # Contribuição
 
