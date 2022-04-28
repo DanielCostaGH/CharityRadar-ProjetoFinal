@@ -1,3 +1,5 @@
+/* CONFIGURAÇÕES GERAIS */
+
 body{
     background-color: rgb(248, 249, 250);
 }
@@ -9,7 +11,6 @@ body{
 #navbarItems{
     padding-right: 7vh;
 }
-
 .nav-link{
     margin-left: 5vh;
     font-size: 3vh;
@@ -61,25 +62,75 @@ footer p{
 }
 
 footer{
-    height: 20vh;
+    height: 15vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #footer{
     width: 100%;
     text-align: center;
 }
+
+/* PAGINA DE LOGIN COMEÇO */
+#idcadastro{
+    background-color: rgb(228, 228, 228);
+    height: 63vh;
+    position: absolute;
+    margin-right: 55%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 3vh 3vh;
+    padding: 2vh;
+}
+
+#btnCadastro{
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    padding-left: 50%;
+    transform: translateX(-50px);
+}
+
+#idLogin{
+    background-color: rgb(228, 228, 228);
+    position: absolute;
+    height: 55vh;
+    width: 25vw;
+    margin-right:5vh;
+    margin-left: 55%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 3vh 3vh;
+    padding: 2vh 5vh 2vh 5vh;
+}
+
+.tituloLogin{
+    text-align: center;
+}
+
+#divisãoCentro{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    height: 65vh;
+    width: 1px;
+    border: 0.5vh solid rgb(63, 63, 63);
+}
+#divLogin{
+    display:""; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    background-color: rgb(255, 255, 255);
+    height: 75vh;
+    width: 60vw;
+    border-radius: 3vh 3vh;
+    box-shadow: 3px 3px 50px black;
+}
+#Idespaço{
+    height: 60vh;
+    margin-bottom: 10%;
+}
+
+
+/* PAGINA DE LOGIN FIM */
