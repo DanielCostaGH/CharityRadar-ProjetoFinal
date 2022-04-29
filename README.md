@@ -32,10 +32,10 @@ Esse projeto foi idealizado, pois o pai de um dos integrantes já contribuía co
 
 - [x] **Cadastrar Usuário**
 - [x] **Fazer Login**
-- [ ] Matricular em Curso
-- [ ] Cancelar Matricula
-- [ ] Visualizar Notas
-- [ ] Visualizar e Atualizar Informações do Estudante
+- [x] **Matricular em Curso**
+- [x] **Cancelar Matricula**
+- [x] **Visualizar Notas**
+- [x] **Visualizar e Atualizar Informações do Estudante**
 
 # Tecnologias Usadas
 
