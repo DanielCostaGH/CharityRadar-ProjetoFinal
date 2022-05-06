@@ -100,16 +100,18 @@
     <section id="idLogin">
         <h1 class="tituloLogin">Login</h1>
         <div class="col-md-12">
+        <form action="/logar" method="post">
             <label for="inputEmail4" class="form-label">Email:</label>
-            <input type="email" name='emaillog' class="form-control" id="inputEmail4" placeholder="example@email.com">
+            <input type="email" name='email' class="form-control" id="inputEmail4" placeholder="example@email.com">
         </div>
         <div class="col-md-12">
             <label for="inputPassword4" class="form-label">Senha:</label>
-            <input type="password" name='senhalog' class="form-control" id="inputPassword" placeholder="Até 8 digitos">
+            <input type="password" name='senha' class="form-control" id="inputPassword" placeholder="Até 8 digitos">
         </div>
         <div id="btnLogin" class="col-12">
             <button type="submit" class="btn btn-primary">Fazer Login</button>
         </div>
+        </form>
     </section>
 </div>
 
