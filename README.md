@@ -1,6 +1,6 @@
 # Charity Radar
 <p align="center" > 
-<img src="https://github.com/DanielCostaGH/CharityRadar-ProjetoFinal/blob/main/img/logo.png?raw=true"
+<img src="https://github.com/DanielCostaGH/CharityRadar-ProjetoFinal/blob/main/public/img/logo.png"
 </p >
 	<br/>
 	<br/>
