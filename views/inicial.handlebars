@@ -10,6 +10,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -51,7 +52,7 @@
             </li>
 
             <li class="nav-item">
-              <a id="nav-linkblue" class="nav-link" href="/login">Acesse sua Conta</a>
+              <a id="nav-linkblue" class="nav-link accAcess">Acesse sua conta</a>
             </li>
           </ul>
         </div>
@@ -60,13 +61,13 @@
   </header>
 
 
-<!-- Conteúdo principal -->
+  <!-- Conteúdo principal -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
     <!-- botões de pagina -->
     <div class="carousel-indicators">
-      <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
+      <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button>
       <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
         aria-label="Slide 2"></button>
       <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
@@ -77,7 +78,7 @@
     <div class="carousel-inner">
       <!-- slide 1 -->
       <div class="carousel-item active divMain">
-        
+
       </div>
 
       <!-- slide 2 -->
@@ -104,7 +105,7 @@
     </button>
   </div>
 
-<!-- Rodapé -->
+  <!-- Rodapé -->
   <footer class="mt-auto container-fluid bg-dark d-flex align-items-center">
 
     <div class="centerP">
@@ -116,9 +117,98 @@
 
 
 
+  <div id="modal-popup" class="modal-container">
+    <div class="container mostrar">
+      <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Login</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Entrar com email" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Digite sua senha" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck">
+                <label for="logCheck" class="text">Lembrar de mim</label>
+              </div>
+
+              <a href="#" class="text">Esqueceu sua senha?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Entrar">
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Não possui conta?
+              <a href="#" class="text signup-link">Criar conta</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Cadastro</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Seu nome" required>
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Seu email" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Criar uma senha" required>
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Confirmar senha" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="sigCheck">
+                <label for="sigCheck" class="text">Lembrar de mim</label>
+              </div>
+
+              <a href="#" class="text">Esqueceu sua senha?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Criar conta">
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Ja tem uma conta?
+              <a href="#" class="text login-link">Fazer Login</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../usability.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>
