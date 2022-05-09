@@ -1,3 +1,4 @@
+
 const container = document.querySelector(".container"),
       pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields = document.querySelectorAll(".password"),
@@ -32,7 +33,8 @@ const container = document.querySelector(".container"),
     });
 // ================================================= PUXAR MODAL FUNCTIONS =====================================
 
-    function iniciaModal(modalID){
+   
+        function iniciaModal(modalID){
         const modal = document.getElementById(modalID);
         modal.classList.add('mostrar');
         modal.addEventListener('click', (e)=> {
@@ -40,9 +42,13 @@ const container = document.querySelector(".container"),
                 modal.classList.remove('mostrar')
             }
         })
-    }
+        }
 
         const accAcess = document.querySelector('.accAcess');
         accAcess.addEventListener('click', () => 
         iniciaModal('modal-popup'));
         
+// ================================================= Cadastro =====================================
+function Cadastastrar(){
+    
+}

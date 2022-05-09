@@ -33,7 +33,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre</a>
+                            <a class="nav-link" href="#">{{sobretext}}</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -121,6 +121,7 @@
 
     <div class="container cadastroClass mobile">
         <h1>Cadastrar</h1>
+        <form action="/cadastroU" method="post">
         <div class="row">
             <label for="inputAddress">Nome:</label>
             <input type="text" placeholder="Organizador">
@@ -140,7 +141,7 @@
         <div id="btnCadastro" class="col-9">
             <button type="submit" class="btn btn-primary">Cadastro</button>
         </div>
-
+        </form>
     </div>
 
 
