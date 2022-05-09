@@ -11,7 +11,6 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 require('./control/auth')(passport);
 
-
 //session para acessar os cookies
 app.use(session({
     secret: 'teste',
@@ -55,56 +54,55 @@ app.use(express.static('public'));
 //Paginas ----- rotas 
 app.get('/', (req, res) => {
     res.render('inicial');
+
 });
+
 app.get('/falha', (req, res) => {
     res.send('falhou');
 });
-app.get('/login', (req, res) => {
-    res.render('login');
+app.get('/logado', (req, res) => {
+    res.render('inicial')
 });
 app.post("/cadastroU", async (req, res) => {
 //---------------
 
     // validação e cadastro
+    const { nome, email, senha, senhaC } = req.body;
 
     var erros = [];
-    if (!req.body.nome  || !req.body.email  || !req.body.senha  || !req.body.telefone ) {
+    if (!nome  || !email  || !senha  || !senhaC ) {
         erros.push({ texto: ' Preencha todos os campos ' });
 
+    }
+    if (senha != senhaC){
+        erros.push({ texto: ' As senhas não batem' });
     }
     if (erros.length > 0) {
         res.render('inicial', { erros: erros })
     }
     else {
         //criação de hash
-        bcrypt.genSalt(8,(erro,salt)=>{
-            bcrypt.hash(req.body.senha,salt,(erro,hash)=>{
-                if(erro){
-                    req.flash("error_msg"," Houve um erro durante a o salvamento do usuário ");
-                    res.redirect("/");
-                }
-                postu.create({
-                    name: req.body.nome,
-                    email: req.body.email,
-                    password: hash,
-                    telefone: req.body.telefone
-        //--------
-        
-                }).then(function () {
-                    // res.flash('success_msg','Cadastro criado com sucesso')
-                    console.log(" Post criado com sucesso ");
-                    res.redirect('/');
-                }).catch(function (erro) {
-                    //  req.flash('error_msg','Houve um erro , tente novamente ')
-                    console.log(" Houve um erro: " + erro);
-                })     
-                req.flash("succes_msg"," Cadastro");
-               
-                
-               
+        try{
+            const salt = bcrypt.genSaltSync(6);
+            const hash = bcrypt.hashSync(req.body.senha);
+            
+            postu.create({
+                name: nome,
+                email: email,
+                senha: hash,
+            })
+            .then(() => {
+                console.log(" Post criado com sucesso ");
+                res.render('inicial', {success_msg: 'Cadastro criado com sucesso'});
+            }).catch((erro) => {
+                req.flash('error_msg','Houve um erro , tente novamente ');
+                console.log(" Houve um erro: " + erro);
             });
-        });
-       
+        }
+        catch(err){
+            req.flash("error_msg"," Houve um erro durante a o salvamento do usuário ");
+            res.redirect("/");
+        }
     }
    
 });

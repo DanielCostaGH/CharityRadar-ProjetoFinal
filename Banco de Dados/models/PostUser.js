@@ -11,15 +11,10 @@ const User = db.sequelize.define('usuarios',{
         type: db.Sequelize.STRING,
         allowNull: false,
     },
-    password:{
-        type: db.Sequelize.STRING,
-        allowNull: false,
-    },
-    telefone:{
+    senha:{
         type: db.Sequelize.STRING,
         allowNull: false,
     }
-   
 });
 
 //forçar criação de tabela -----
