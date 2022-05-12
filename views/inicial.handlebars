@@ -52,11 +52,11 @@
             </li>
 
             <li class="nav-item">
-              
-              
+
+
               <a id="nav-linkblue" class="nav-link accAcess">Acesse sua conta</a>
-              
-              
+
+
             </li>
           </ul>
         </div>
@@ -81,17 +81,32 @@
     <!-- slides -->
     <div class="carousel-inner">
       <!-- slide 1 -->
-      <div class="carousel-item active divMain">
+      <div id="slide1" class="carousel-item active divMain">
+        <div class="slideBackground">
+          <div class="slideArea">
+            <div id="imgslide1"></div>
+            <div id="imgslide1"></div>
+            <div id="imgslide1"></div>
+          </div>
 
+        </div>
       </div>
 
       <!-- slide 2 -->
       <div class="carousel-item divMain">
+        <div class="slideBackground">
+          <div class="slideArea">
 
+          </div>
+        </div>
       </div>
 
       <!-- slide 3 -->
       <div class="carousel-item divMain">
+        <div class="slideBackground">
+          <div class="slideArea">
+          </div>
+        </div>
 
       </div>
     </div>
@@ -119,9 +134,9 @@
   </footer>
 
 
-{{!-- Modal de login --}}
+  {{!-- MODAL DE LOGIN --}}
   <div id="modal-popup" class="modal-container">
-    <div class="container"> 
+    <div class="container">
       <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
       <div class="forms">
         <div class="form login">
@@ -129,22 +144,13 @@
 
           <form action="/logar" method='post'>
             <div class="input-field">
-              <input type="text" name = "email" placeholder="Entrar com email" required>
+              <input type="text" name="email" placeholder="Entrar com email" required>
               <i class="uil uil-envelope icon"></i>
             </div>
             <div class="input-field">
-              <input type="password" name = "senha" class="password" placeholder="Digite sua senha" required>
+              <input type="password" name="senha" class="password" placeholder="Digite sua senha" required>
               <i class="uil uil-lock icon"></i>
               <i class="uil uil-eye-slash showHidePw"></i>
-            </div>
-
-            <div class="checkbox-text">
-              <div class="checkbox-content">
-                <input type="checkbox" id="logCheck">
-                <label for="logCheck" class="text">Lembrar de mim</label>
-              </div>
-
-              <a href="#" class="text">Esqueceu sua senha?</a>
             </div>
 
             <div class="input-field button">
@@ -159,7 +165,7 @@
           </div>
         </div>
         {{!-- ========================================================================== --}}
-        <!-- Registration Form -->
+        <!-- MODAL DE CADASTRO -->
 
         <div class="form signup">
           <span class="title">Cadastro</span>
@@ -183,14 +189,6 @@
               <i class="uil uil-eye-slash showHidePw"></i>
             </div>
 
-            <div class="checkbox-text">
-              <div class="checkbox-content">
-                <input type="checkbox" id="sigCheck">
-                <label for="sigCheck" class="text">Lembrar de mim</label>
-              </div>
-
-              <a href="#" class="text">Esqueceu sua senha?</a>
-            </div>
 
             <div class="input-field button">
               <input type="submit" value="Criar conta">
@@ -206,9 +204,9 @@
       </div>
     </div>
   </div>
-{{!-- ------------------------------------------------------------------------------------ --}}
+  {{!-- ------------------------------------------------------------------------------------ --}}
 
-    <script src="../js/usability.js"></script> 
+  <script src="../js/usability.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

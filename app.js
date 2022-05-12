@@ -92,7 +92,7 @@ app.post("/cadastroU", async (req, res) => {
                 senha: hash,
             })
             .then(() => {
-                console.log(" Post criado com sucesso ");
+                console.log(" Post criado com sucesso ")
                 res.render('inicial', {success_msg: 'Cadastro criado com sucesso'});
             }).catch((erro) => {
                 req.flash('error_msg','Houve um erro , tente novamente ');

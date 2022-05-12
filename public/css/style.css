@@ -33,6 +33,7 @@ body {
 }
 
 
+
 @font-face {
     font-family: 'titin';
     src: url('/abraham/1\ Abraham.otf') format('opentype');
@@ -58,31 +59,9 @@ body {
     height: 80vh;
 }
 
-footer p {
-    margin-bottom: 0;
-    color: white
-}
-
-.centerP {
-    text-align: center;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-footer {
-    height: 15vh;
-}
-
-#footer {
-    width: 100%;
-    text-align: center;
-}
-
-/* PAGINA DE LOGIN */
+/*================================= PAGINA DE LOGIN ======================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.modal-container.mostrar{
-    display: flex;
-}
+
 /* @keyframes modal{
     from{
         opacity: 0;
@@ -96,6 +75,9 @@ footer {
 .mostrar .modal{
     animation: modal .3s;
 } */
+.modal-container.mostrar{
+    display: flex;
+}
 .fechar{
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
@@ -282,5 +264,131 @@ footer {
 
 .form .login-signup{
     margin-top: 30px;
+    text-align: center;
+}
+@media only screen and  (max-width: 500px){
+    .container{
+        z-index: 5000;
+        position: absolute;
+        top: 49%;
+        left: 43%;
+        right:0%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+        height: 97%;
+        width: 96%;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 0 20px;
+    }
+    
+    .container .forms{
+        display: flex;
+        align-items: center;
+        height: 440px;
+        width: 200%;
+        transition: height 0.2s ease;
+    
+    }
+    .container.active .forms{
+        height: 100vh;
+    }
+    
+}
+
+@media only screen and  (max-width: 350px){
+    .container{
+        z-index: 5000;
+        position: absolute;
+        top: 49%;
+        left: 43%;
+        right:0%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+        height: 97%;
+        width: 96%;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 0 20px;
+    }
+    
+    .container.active .forms{
+        height: 100vh;
+    }
+
+    .fechar{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border-radius: 1vh 1vh;
+    font-weight: bold;
+    border: none;
+}
+}
+
+
+
+/*================================= PAGINA DE LOGIN (FINAL) ======================================*/
+
+/*================================= SLIDES PAGINA INICIAL ======================================*/
+.slideBackground{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(160deg,rgb(161, 163, 255), rgb(255,255,255) );
+}
+
+
+.slideArea{
+    position: relative;
+    opacity: 0.8;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    filter: none;
+}
+
+#imgslide1{
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*================================= SLIDES PAGINA INICIAL (FINAL) ======================================*/
+
+
+
+footer p {
+    margin-bottom: 0;
+    color: white
+}
+
+.centerP {
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 15vh;
+}
+
+#footer {
+    width: 100%;
     text-align: center;
 }
