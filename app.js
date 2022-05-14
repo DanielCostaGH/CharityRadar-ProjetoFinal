@@ -54,9 +54,10 @@ app.use(express.static('public'));
 //Paginas ----- rotas 
 app.get('/', (req, res) => {
     res.render('inicial');
-
 });
-
+app.get('/eventos', (req, res) => {
+    res.render('eventos');
+});
 app.get('/falha', (req, res) => {
     res.send('falhou');
 });
