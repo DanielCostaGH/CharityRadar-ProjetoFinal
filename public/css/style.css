@@ -424,19 +424,17 @@ body {
 .secSobre{
     position: relative;
     width: 90%;
-    height: 115vh;
+    height: 95vh;
     background-color: rgb(255, 255, 255);
     align-content: space-around;
     margin: 0 auto;
-    margin-bottom: 5%;
 }
 .leftSobre{
     position: absolute;
     width: 50%;
     height: 100%;
     display: inline-block;
-    padding-top: 10vh;
-    
+    padding-top: 5vh;
     top: 0;
     left: 0;
     margin-left: 2%;
@@ -446,7 +444,7 @@ body {
     width: 50%;
     height: 100%; 
     display: inline-block;
-    padding-top: 10vh;
+    padding-top: 5vh;
     top: 0;
     right: 0;
     margin-right: 2%;
@@ -461,11 +459,11 @@ body {
     border-radius: 5vh 5vh;
 }
 #imgGrupo{
-    height: 50vh;
+    height: 45vh;
     width: 40vw;
     box-shadow: 0 0 15px 2px #333;
     margin: 0 auto;
-    margin-top: 15vh;
+    margin-top: 5vh;
     border-radius: 5vh 5vh;
 }
 .txtSobre{
@@ -478,7 +476,6 @@ body {
     font-family: Verdana, sans-serif;
     padding-bottom: 2vh;
 }
-
 
 
 
