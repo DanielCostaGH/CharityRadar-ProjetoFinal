@@ -28,14 +28,20 @@ Esse projeto foi idealizado, pois o pai de um dos integrantes já contribuía co
 * [Agradecimentos](#agradecimentos)
 
 
-# Requisitos Funcionais 
+# Requisitos Funcionais - Usuarios (Igreja)
 
-- [x] **Cadastrar Usuário**
-- [x] **Fazer Login**
-- [x] **Matricular em Curso**
-- [x] **Cancelar Matricula**
-- [x] **Visualizar Notas**
-- [x] **Visualizar e Atualizar Informações do Estudante**
+- [x] **Capacidade de realizar Cadastros**
+- [x] **Capacidade de Fazer Login**
+- [x] **Capacidade de cadastrar eventos**
+- [x] **Colocar a descrição do Evento**
+- [x] **Postar fotos dos eventos**
+- [x] **Publicar data, hora, local dos eventos**
+
+# Requisitos Funcionais - Usuarios (Colaboradores)
+
+- [x] **Capacidade de realizar Cadastros (Não obrigatorio)**
+- [x] **Capacidade de Fazer Login (Não obrigatorio)**
+- [x] **Capacidade de visualizar os eventos**
 
 # Tecnologias Usadas
 
