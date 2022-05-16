@@ -418,19 +418,71 @@ body {
     height:100%;
     width:100%;
 }
-
-
-
-
-
-
-
-
-
-
 /*================================= SLIDES PAGINA INICIAL (FINAL) ======================================*/
 
+/*================================= SOBRE (INICIO) ======================================*/
+.secSobre{
+    position: relative;
+    width: 90%;
+    height: 115vh;
+    background-color: rgb(255, 255, 255);
+    align-content: space-around;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+.leftSobre{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    padding-top: 10vh;
+    
+    top: 0;
+    left: 0;
+    margin-left: 2%;
+}
+.rightSobre{
+    position: absolute;
+    width: 50%;
+    height: 100%; 
+    display: inline-block;
+    padding-top: 10vh;
+    top: 0;
+    right: 0;
+    margin-right: 2%;
+    
+}
+#imgRadar{
+    height: 35vh;
+    width: 20vw;
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0 0 15px 2px #333;
+    border-radius: 5vh 5vh;
+}
+#imgGrupo{
+    height: 50vh;
+    width: 40vw;
+    box-shadow: 0 0 15px 2px #333;
+    margin: 0 auto;
+    margin-top: 15vh;
+    border-radius: 5vh 5vh;
+}
+.txtSobre{
+    height: 100%;
+    width: 70%;
+    font-family: 'titin';
+}
+.txtSobre p{
+    text-align: justify;
+    font-family: Verdana, sans-serif;
+    padding-bottom: 2vh;
+}
 
+
+
+
+/*================================= SOBRE (FINAL) ======================================*/
 
 footer p {
     margin-bottom: 0;
