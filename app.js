@@ -64,6 +64,9 @@ app.get('/falha', (req, res) => {
 app.get('/logado', (req, res) => {
     res.render('inicial')
 });
+app.get('/faq', (req, res) => {
+    res.render('faq')
+});
 app.post("/cadastroU", async (req, res) => {
 //---------------
 
@@ -116,10 +119,6 @@ app.post('/logar',(req,res,next)=>{
         failuredFlash: true
     })(req,res,next);
 })
-
-
-
-
 
 app.listen(3333, () => {
     console.log("Servidor iniciado na Porta 3333: http://localhost:3333");

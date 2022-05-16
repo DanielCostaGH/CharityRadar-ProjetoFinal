@@ -484,6 +484,297 @@ body {
 
 /*================================= SOBRE (FINAL) ======================================*/
 
+
+
+/*================================= DUVIDAS (INICIO) ======================================*/
+
+.faq-container {
+    box-sizing: border-box;
+    min-height: 70vh;
+    background-color: #eee;
+}
+
+/* Section Como podemos te ajudar */
+.faq-pesquisa {
+    background-color: #212529;
+    border-top: 0.3vh solid #00a2ff;
+    padding: 5vh 1.5vh;
+}
+
+.faq-pesquisa-duvida {
+    justify-content: center;
+    text-align: center;
+}
+
+.faq-pesquisa-duvida h1 {
+    color: #fff;
+    font-family: 'titin';
+    font-size: 4.5vh;
+}
+
+.faq-pesquisa-duvida input {
+    display: block;
+    min-height: 5vh;
+    min-width: 60%;
+    margin: 0 auto;
+    padding: 0 1.705vh 0 5.33vh;
+    font-size: 3vh;
+    font-weight: 500;
+    border-style: none;
+    border-radius: 1vh;
+    background-image: url(/img/lupa.png);
+    background-size: cover;
+    background-position: 1.06vh;
+    background-size: 3.411vh;
+    background-repeat: no-repeat;
+}
+
+.faq-pesquisa-duvida input:hover {
+    width: 70%;
+    transition: all 100ms;
+}
+
+.faq-content-divider {
+    height: 1px;
+    margin-bottom: 24px;
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+}
+
+/* Section Organizadores e Doadores */
+.faq-segment-section {
+    z-index: 2;
+    background-color: #f5f5f5;
+    position: relative;
+    display: block;
+}
+
+.faq-segment-container-w-clearfix {
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.faq-segment-user{
+    width: 100%;
+    float: none;
+    background-color: #fff;
+    padding: 0px 0px 32px 0px;
+    border-radius: 15px;
+    margin: 1px;
+}
+
+.faq-segment-description {
+    padding-top: 16px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.faq-segment-img-block {
+    background-image: url("//theme.zdassets.com/theme_assets/101015/c37c96511204a139dc5831112e3525f54b098598.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+.faq-segment-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    position: relative;
+}
+
+.faq-segment-description-block {
+    padding: 48px 24px 40px;
+}
+
+.segment-faq-section-title{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding: 0 4px;
+    line-height: 100%;
+}
+
+.segment-faq-home-text{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.faq-contact-channels {
+    list-style: none;
+    max-width: 100%;
+    padding: 0 16px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-segment-list {
+    width: 50%;
+    padding: 0 8px;
+    float: left;
+}
+
+.faq-segment-bullet {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50px;
+}
+
+.faq-segment-topic-text {
+    margin-bottom: 8px;
+    padding: 4px 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.faq-topic-link {
+    color: #265df2;
+    font-weight: 500;
+}
+
+.faq-ou {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+/* Section Duvidas Frequentes */
+
+.faq-duvidas-frequentes {
+    z-index: 2;
+    background-color: #f5f5f5;
+    position: relative;
+    display: block;
+}
+
+.faq-conteudo-duvidas{
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-conteudo-duvidas h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 24px;
+}
+
+.faq-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.faq-column-wrapper {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    max-width: 100%;
+    flex: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: left;
+}
+
+.faq-block-li {
+    display: list-item;
+    position: relative;
+    width: 50%;
+    padding: 0 4px;
+    margin-bottom: 4px;
+}
+
+.faq-duvidas-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0, .1);
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.faq-img-a-btn{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 8px;
+    background-image: url(https://theme.zdassets.com/theme_assets/101015/4f09913fd9b1d39eabcd2e78c74cdc4fb3a812da.svg);
+    background-color: #4a60f4;
+    background-size: 24px;
+    background-position: 45% 50%;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.article-duvidas {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 18px;
+    padding: 0px 48px 16px 64px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1d1d1d;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*================================= DUVIDAS (FINAL) ======================================*/
+
+
+
+
+/*================================= FOOTER (--) ======================================*/
 footer p {
     margin-bottom: 0;
     color: white
@@ -503,3 +794,4 @@ footer {
     width: 100%;
     text-align: center;
 }
+

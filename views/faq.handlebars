@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Radar</title>
+    <link rel="icon" href="../public/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <!-- logo -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img id="logo1" src="../img/logo.png" class="img-fluid" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Barra de navegação -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="navbarItems" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li id="nav-link1" class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Eventos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Únicos</a></li>
+                                <li><a class="dropdown-item" href="#">Frequentes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="nav-linkblue" class="nav-link accAcess">Acesse sua conta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FAQ -->
+    <main class="faq-container" role="main">
+
+        <!-- Pesquisa -->
+        <section class="faq-pesquisa">
+            <div class="faq-pesquisa-duvida">
+                <h1>Como podemos te ajudar?</h1>
+                <input type="text" placeholder="Pesquisa" aria-placeholder="Pesquisa">
+            </div>
+        </section>
+        <div class="faq-content-divider"></div>
+
+        <!-- Segmento de Usuarios -->
+        <section class="faq-segment-section">
+            <div class="faq-segment-container-w-clearfix">
+                <!-- Organizador -->
+                <div class="faq-segment-user">
+                    <div id="div-organizadores" class="faq-segment-description">
+                        <div class="faq-segment-img-block">
+                            <img src="" class="faq-segment-img">
+                        </div>
+                        <div class="faq-segment-description-block">
+                            <h2 class="segment-faq-section-title">Organizadores</h2>
+                            <p class="segment-faq-home-text">Está com alguma dúvida em relação à ingressos,
+                                inscrições, processo de compra, troca de titularidade ou cancelamentos?</p>
+                        </div>
+                        <div class="faq-content-divider"></div>
+                    </div>
+                    <ul class="faq-contact-channels">
+                        <li class="contact-segment-list">
+                            <div class="faq-segment-bullet">
+                                <img
+                                    src="//theme.zdassets.com/theme_assets/101015/1a8eab32d380b3331598f8f8f5d94b7ac70c7bac.svg" />
+                            </div>
+                            <div class="faq-segment-topic-text">Veja as dúvidas frequentes de <br>
+                                <a href="#" class="faq-topic-link">Organizadores
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contact-segment-list">
+                            <div class="faq-segment-bullet">
+                                <img
+                                    src="//theme.zdassets.com/theme_assets/101015/5d275daed291e7996af3a1e11dc163fe28feda1d.svg" />
+                            </div>
+                            <div class="faq-segment-topic-text">Ou
+                                <a href="#" class="faq-topic-link">envie sua
+                                    dúvida por
+                                    aqui</a><br>
+                                <em class="sympla-topic-obs-text">(tempo de resposta: até 1 dia
+                                    útil)</em>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- OU -->
+                <div class="faq-ou">
+                    <span>ou</span>
+                </div>
+
+                <!-- Doadores -->
+                <div class="faq-segment-user">
+                    <div id="div-clientes" class="faq-segment-description">
+                        <div class="faq-segment-img-block">
+                            <img src="" class="faq-segment-img">
+                        </div>
+                        <div class="faq-segment-description-block">
+                            <h2 class="segment-faq-section-title">Doadores</h2>
+                            <p class="segment-faq-home-text">Está com alguma dúvida em relação à ingressos,
+                                inscrições, processo de compra, troca de titularidade ou cancelamentos?</p>
+                        </div>
+                        <div class="faq-content-divider"></div>
+                    </div>
+                    <ul class="faq-contact-channels">
+                        <li class="contact-segment-list">
+                            <div class="faq-segment-bullet">
+                                <img
+                                    src="//theme.zdassets.com/theme_assets/101015/1a8eab32d380b3331598f8f8f5d94b7ac70c7bac.svg" />
+                            </div>
+                            <div class="faq-segment-topic-text">Veja as dúvidas frequentes de <br>
+                                <a href="#" class="faq-topic-link">Doadores
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contact-segment-list">
+                            <div class="faq-segment-bullet">
+                                <img
+                                    src="//theme.zdassets.com/theme_assets/101015/5d275daed291e7996af3a1e11dc163fe28feda1d.svg" />
+                            </div>
+                            <div class="faq-segment-topic-text">Ou
+                                <a href="#" class="faq-topic-link">envie sua
+                                    dúvida por
+                                    aqui</a><br>
+                                <em class="sympla-topic-obs-text">(tempo de resposta: até 1 dia
+                                    útil)</em>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Duvidas Frequentes -->
+        <section class="faq-duvidas-frequentes">
+            <div class="faq-conteudo-duvidas">
+                <h2>Dúvidas frequentes</h2>
+                <div class="faq-content-divider"></div>
+                <div class="faq-row">
+                    <ul class="faq-column-wrapper">
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                        <li class="faq-block-li">
+                            <a href="#" class="faq-duvidas-btn">
+                                <div class="faq-img-a-btn"></div>
+                                <p class="article-duvidas">Paragrafo Duvidas Paragrafo Duvidas Paragrafo Duvidas</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto container-fluid bg-dark d-flex align-items-center">
+        <div class="centerP">
+            <p>@copryght Cheryt Radar</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="usability.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
