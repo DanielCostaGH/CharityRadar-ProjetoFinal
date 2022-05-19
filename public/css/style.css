@@ -385,6 +385,7 @@ body {
 ::-webkit-scrollbar-track{
     background: rgb(33, 37, 41);
     border-radius: 100vw;
+    margin-block: 0;
 }
 ::-webkit-scrollbar-thumb{
     background: #265df2;
@@ -424,7 +425,7 @@ body {
 .secSobre{
     position: relative;
     width: 90%;
-    height: 95vh;
+    height: 720px;
     background-color: rgb(255, 255, 255);
     align-content: space-around;
     margin: 0 auto;
@@ -768,6 +769,119 @@ a {
 
 /*================================= DUVIDAS (FINAL) ======================================*/
 
+/*================================= CRIAR EVENTOS (INICIO) ======================================*/
+/* Barra lateral */
+#body-contentEv{
+    width: 100%;
+    position: relative;
+    height: 720px;
+}
+#barraLateralEv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background-color: #267ef2;
+}
+#iconEvent{
+    font-size: 4rem;
+}
+#txt_lateral_Ev{
+    margin: 0 auto;
+    height: 100%;
+    width: 70%;
+    color: whitesmoke;
+    margin-top: 20%;
+    text-align: center;
+}
+#txt_lateral_Ev p{
+    font-size: 1.3rem;
+}
+#txt_lateral_Ev h1{
+    font-size: 2.4rem;
+    font-family: 'titin';
+}
+
+/* Conteudo principal */
+#mainContentEv{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    background-color: rgb(238, 238, 238);
+}
+#mainContentEv h1{
+    color: black;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+    font-family: 'titin';
+}
+#formPlace{
+    height: 75%;
+    width: 90%;
+    
+    margin: 0 auto;
+    padding: 2%;
+}
+#divAnexo{
+    background-color: white;
+    padding: 1%;
+    margin: 0 1% 0 1%;
+    width: 98%;
+    border-radius: 10%, 10%, 10%, 10%;
+    border: 1px solid rgb(204, 204, 204);
+}
+#divAnexo div{
+    margin: 0 1% 0 1%;
+}
+.divInputs input{
+    margin: 0 1% 0 1%;
+}
+.divSelects select{
+    margin: 0 1% 0 1%;
+}
+#numEnd{
+    width: 10%;
+    border: none;
+    padding: 1%;
+    border-radius: 10%, 10%, 10%, 10%;
+    border: 1px solid rgb(204, 204, 204);
+}
+#bairroEnd{
+    border: none;
+    padding: 1%;
+    border-radius: 10%, 10%, 10%, 10%;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.inputClass:focus{
+    box-shadow:0 0 5px 2px #267ef2;
+    outline: none;
+}
+.inputClass{
+    border-radius: 10%, 10%, 10%, 10%;
+}
+#inputDesc{
+    margin: 0 1% 0 1%;
+    width: 98%;
+}
+#buttonEv{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    padding-top: 3%;
+}
+.btnEv:focus{
+    box-shadow:0 0 5px 2px #267ef2;
+    outline: none;
+}
+
+
+
+/*================================= CRIAR EVENTOS (FINAL) ======================================*/
 
 
 

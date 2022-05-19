@@ -10,7 +10,6 @@ const flash = require('connect-flash');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 require('./control/auth')(passport);
-
 //session para acessar os cookies
 app.use(session({
     secret: 'teste',
@@ -58,6 +57,9 @@ app.get('/', (req, res) => {
 app.get('/eventos', (req, res) => {
     res.render('eventos');
 });
+app.get('/criarEv', (req, res) => {
+    res.render('criarEvento');
+});
 app.get('/falha', (req, res) => {
     res.send('falhou');
 });
@@ -89,7 +91,7 @@ app.post("/cadastroU", async (req, res) => {
         try{
             const salt = bcrypt.genSaltSync(6);
             const hash = bcrypt.hashSync(req.body.senha);
-            
+            // cadastro----
             postu.create({
                 name: nome,
                 email: email,
@@ -102,12 +104,14 @@ app.post("/cadastroU", async (req, res) => {
                 req.flash('error_msg','Houve um erro , tente novamente ');
                 console.log(" Houve um erro: " + erro);
             });
+            
         }
         catch(err){
             req.flash("error_msg"," Houve um erro durante a o salvamento do usuário ");
             res.redirect("/");
         }
     }
+    //cadastro ---------
    
 });
     //--------
