@@ -87,29 +87,29 @@
 
         <section id="mainContentEv">
             <h1>Vamos criar seu evento</h1>
-            <form action="/cadastrouEvento" method='post'>
+            <form action="/cadastrouEvento" method='post' enctype="multipart/form-data">
                 <div id="formPlace">
                     <div id="formEv">
                         <div class="divInputs input-group mb-3">
-                            <input type="text" class="form-control inputClass" placeholder="Nome do evento">
-                            <input type="text" class="form-control inputClass" placeholder="Número para contato">
+                            <input type="text" name = 'nome' class="form-control inputClass" placeholder="Nome do evento">
+                            <input type="text" name = 'numero' class="form-control inputClass" placeholder="Número para contato (Opicional)">
                         </div>
                         <div class="divSelects input-group mb-3">
-                            <select class="form-select inputClass">
+                            <select name = 'tipo' class="form-select inputClass">
                                 <option selected>Selecione o tipo de evento</option>
                                 <option value="unico">Unico</option>
                                 <option value="frequente">Frequente</option>
                             </select>
-                            <select class="form-select inputClass">
+                            <select name = 'cidade' class="form-select inputClass">
                                 <option selected>Selecione a Cidade</option>
                                 <option value="unico">Belo Horizonte</option>
                             </select>
                         </div>
                         <div class="divInputs input-group mb-3">
-                            <input type="text" class="form-control inputClass"
+                            <input name = 'rua' type="text" class="form-control inputClass"
                                 placeholder="Endereço do evento (Rua, Bairro e número)">
-                            <input type="text" id="bairroEnd" class="inputClass" placeholder="Bairro">
-                            <input type="text" id="numEnd" class="inputClass" placeholder="Número">
+                            <input type="text" name = 'bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
+                            <input type="text" name = 'number'id="numEnd" class="inputClass" placeholder="Número">
                         </div>
                         <div id="divAnexo" class="input-group mb-3">
                             <div class="mb-3">
@@ -124,7 +124,7 @@
 
                         <div id="inputDesc" class="input-group">
                             <span class="input-group-text">Descrição do evento</span>
-                            <textarea id="" class="form-control inputClass"></textarea>
+                            <textarea name = 'descricao' id="" class="form-control inputClass"></textarea>
                         </div>
                         <div id="buttonEv">
                             <button type="button" class="btnEv btn btn-outline-primary">Cadastrar</button>

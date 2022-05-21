@@ -10,6 +10,9 @@ const flash = require('connect-flash');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 require('./control/auth')(passport);
+const multer = require('multer');
+const uploadImage = require('./middlewares/uploadimage')
+
 //session para acessar os cookies
 app.use(session({
     secret: 'teste',

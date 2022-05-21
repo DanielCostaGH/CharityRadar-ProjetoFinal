@@ -1,12 +1,6 @@
 const db = require('../models/db');
 
 const Event = db.sequelize.define('eventos',{
-   /* id:{
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey:true,
-    },*/
     name:{
         type: db.Sequelize.STRING,
         allowNull: false,
