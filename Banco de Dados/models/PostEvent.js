@@ -5,7 +5,27 @@ const Event = db.sequelize.define('eventos',{
         type: db.Sequelize.STRING,
         allowNull: false,
     },
-    email:{
+    numero:{
+        type: db.Sequelize.INTEGER,
+        allowNull: false,
+    },
+    tipodeevento:{
+        type: db.Sequelize.STRING,
+        allowNull: false,
+    },
+    endereco:{
+        type: db.Sequelize.STRING,
+        allowNull: false,
+    },
+    enderecoimagemcapa:{
+        type: db.Sequelize.STRING,
+        allowNull: false,
+    },
+    enderecoimagens:{
+        type: db.Sequelize.STRING,
+        allowNull: false,
+    },
+    descricao:{
         type: db.Sequelize.STRING,
         allowNull: false,
     }

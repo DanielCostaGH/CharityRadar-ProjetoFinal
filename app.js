@@ -11,7 +11,7 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 require('./control/auth')(passport);
 const multer = require('multer');
-const uploadImage = require('./middlewares/uploadimage')
+const uploadImage = require('./middlewares/uploadimage');
 
 //session para acessar os cookies
 app.use(session({
@@ -66,6 +66,9 @@ app.get('/criarEv', (req, res) => {
 app.get('/falha', (req, res) => {
     res.send('falhou');
 });
+//app.post("/cadastroevento",uploadImage.fields())=>{
+ //   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
+//}
 app.get('/logado', (req, res) => {
     res.render('inicial')
 });
