@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos</title>
+  <title>Editar Cadastro</title>
+  <link rel="icon" href="../public/img/logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -67,28 +69,44 @@
     </nav>
   </header>
 
-  <!-- Conteúdo principal -->
 
-  <div id="body-content">
-    <section class="vertical-menu">
-      <div id="event-title">
-        <h2>Eventos</h2>
+  <div id="bodyEdCadastro">
+    <section id="mainContentCad">
+      <h1>Editar Cadastro</h1>
+      <div class="form-Ed">
+
+        <form action="" method='post'>
+          <div class="divInputs input-group mb-3">
+            <input type="text" name='nome' class="form-control inputClass" placeholder="Alterar nome">
+            <input type="text" name='numero' class="form-control inputClass"
+              placeholder="Alterar E-mail">
+          </div>
+          <div class="divInputs input-group mb-3">
+            <input type="text" name='nome' class="form-control inputClass" placeholder="">
+            <input type="text" name='numero' class="form-control inputClass"
+              placeholder="">
+          </div>
+          <div class="divInputs input-group mb-3">
+            <input type="text" name='nome' class="form-control inputClass" placeholder="">
+            <input type="text" name='numero' class="form-control inputClass"
+              placeholder="">
+          </div>
+
+
+
+
+          <div id="buttonCev">
+            <button type="button" class="btnCev btn btn-outline-primary">Salvar Alterações</button>
+          </div>
+        </form>
       </div>
-      <div class="scroll-area"></div>
-      <div class="scroll-area"></div>
-      <div class="scroll-area"></div>
-      <div class="scroll-area"></div>
-      <div class="scroll-area"></div>
-      <div class="scroll-area"></div>
-    </section>
-
-    <section class="show-event">
-      <div id="main-content">
-
-      </div>
-    </section>
   </div>
+  </div>
+  </div>
+  </div>
+  </section>
 
+  </div>
 
 
   <!-- Rodapé -->
@@ -100,80 +118,9 @@
 
   </footer>
 
-  {{!-- MODAL DE LOGIN --}}
-  <div id="modal-popup" class="modal-container">
-    <div class="container">
-      <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
-      <div class="forms">
-        <div class="form login">
-          <span class="title">Login</span>
-
-          <form action="/logar" method='post'>
-            <div class="input-field">
-              <input type="text" name="email" placeholder="Entrar com email" required>
-              <i class="uil uil-envelope icon"></i>
-            </div>
-            <div class="input-field">
-              <input type="password" name="senha" class="password" placeholder="Digite sua senha" required>
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
-            </div>
-
-            <div class="input-field button">
-              <input type="submit" value="Entrar">
-            </div>
-          </form>
-
-          <div class="login-signup">
-            <span class="text">Não possui conta?
-              <a href="#" class="text signup-link">Criar conta</a>
-            </span>
-          </div>
-        </div>
-        {{!-- ========================================================================== --}}
-        <!-- MODAL DE CADASTRO -->
-
-        <div class="form signup">
-          <span class="title">Cadastro</span>
-
-          <form action="/cadastroU" method='post'>
-            <div class="input-field">
-              <input type="text" name='nome' placeholder="Seu nome" required>
-              <i class="uil uil-user"></i>
-            </div>
-            <div class="input-field">
-              <input type="text" name='email' placeholder="Seu email" required>
-              <i class="uil uil-envelope icon"></i>
-            </div>
-            <div class="input-field">
-              <input type="password" name='senha' class="password" placeholder="Criar uma senha" required>
-              <i class="uil uil-lock icon"></i>
-            </div>
-            <div class="input-field">
-              <input type="password" name='senhaC' class="password" placeholder="Confirmar senha" required>
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
-            </div>
-
-
-            <div class="input-field button">
-              <input type="submit" value="Criar conta">
-            </div>
-          </form>
-
-          <div class="login-signup">
-            <span class="text">Ja tem uma conta?
-              <a href="#" class="text login-link">Fazer Login</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   {{!-- ------------------------------------------------------------------------------------ --}}
 
-
-  <script src="../js/usability.js"></script>
+  {{!-- <script src="../js/usability.js"></script> --}}
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

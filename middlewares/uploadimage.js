@@ -1,13 +1,13 @@
 const multer = require ('multer');
 
 // Function que sera utilizada para o save de imagens (para cadastro de eventos)
-module.exports=(eventName,multer({
+module.exports=(multer({
     storage: multer.diskStorage({
         destination: function (req, file, cb){
-            cb(null, './public/imagensSalvas')
+            cb(null, './public/imagensUser')
         },
         filename: (req,file,cb) =>{
-            cb(null,Date.now().toString + "_" + file.originalname + eventName )
+            cb(null,Date.now().toString + "_" + file.originalname )
         }
     }),
     fileFilter: (req,file,cb)=>{

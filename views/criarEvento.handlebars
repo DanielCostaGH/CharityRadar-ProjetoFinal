@@ -51,6 +51,8 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
+                                <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
+                                <li><a class="dropdown-item" href="/editarC">Editar Cadastro</a></li>
                                 <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
                             </ul>
                         </li>
@@ -87,47 +89,48 @@
 
         <section id="mainContentEv">
             <h1>Vamos criar seu evento</h1>
-            <form action="/cadastrouEvento" method='post' enctype="multipart/form-data">
+            <form action="/cadastroevento" method='post' enctype="multipart/form-data">
                 <div id="formPlace">
                     <div id="formEv">
                         <div class="divInputs input-group mb-3">
-                            <input type="text" name = 'nome' class="form-control inputClass" placeholder="Nome do evento">
-                            <input type="text" name = 'numero' class="form-control inputClass" placeholder="Número para contato (Opicional)">
+                            <input type="text" name='nome' class="form-control inputClass" placeholder="Nome do evento">
+                            <input type="text" name='numero' class="form-control inputClass"
+                                placeholder="Número para contato (Opicional)">
                         </div>
                         <div class="divSelects input-group mb-3">
-                            <select name = 'tipo' class="form-select inputClass">
+                            <select name='tipo' class="form-select inputClass">
                                 <option selected>Selecione o tipo de evento</option>
                                 <option value="unico">Unico</option>
                                 <option value="frequente">Frequente</option>
                             </select>
-                            <select name = 'cidade' class="form-select inputClass">
+                            <select name='cidade' class="form-select inputClass">
                                 <option selected>Selecione a Cidade</option>
                                 <option value="unico">Belo Horizonte</option>
                             </select>
                         </div>
                         <div class="divInputs input-group mb-3">
-                            <input name = 'rua' type="text" class="form-control inputClass"
+                            <input name='rua' type="text" class="form-control inputClass"
                                 placeholder="Endereço do evento (Rua, Bairro e número)">
-                            <input type="text" name = 'bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
-                            <input type="text" name = 'numerorua'id="numEnd" class="inputClass" placeholder="Número">
+                            <input type="text" name='bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
+                            <input type="text" name='numerorua' id="numEnd" class="inputClass" placeholder="Número">
                         </div>
                         <div id="divAnexo" class="input-group mb-3">
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Foto de capa do seu evento</label>
-                                <input class="form-control inputClass" type="file" id="formFile">
+                                <input class="form-control inputClass" name='imagemcapa' type="file" id="formFile">
                             </div>
                             <div class="mb-3">
                                 <label for="formFileMultiple" class="form-label">Fotos para seu evento anúncio</label>
-                                <input class="form-control inputClass" type="file" id="formFileMultiple" multiple>
+                                <input class="form-control inputClass" name='imagens' type="file" id="formFileMultiple" multiple>
                             </div>
                         </div>
 
                         <div id="inputDesc" class="input-group">
                             <span class="input-group-text">Descrição do evento</span>
-                            <textarea name = 'descricao' id="" class="form-control inputClass"></textarea>
+                            <textarea name='descricao' id="" class="form-control inputClass"></textarea>
                         </div>
                         <div id="buttonEv">
-                            <button type="button" class="btnEv btn btn-outline-primary">Cadastrar</button>
+                            <button type="submit" class="btnEv btn btn-outline-primary">Cadastrar</button>
                         </div>
                     </div>
 
@@ -158,7 +161,7 @@
         </div>
 
     </footer>
-    <script src="../js/usability.js"></script>
+    {{!-- <script src="../js/usability.js"></script> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

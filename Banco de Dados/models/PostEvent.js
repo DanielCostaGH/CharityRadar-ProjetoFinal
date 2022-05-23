@@ -6,18 +6,14 @@ const Event = db.sequelize.define('eventos',{
         allowNull: false,
     },
     numero:{
-        type: db.Sequelize.INTEGER,
-        allowNull: false,
+        type: db.Sequelize.STRING,
+        allowNull: true,
     },
     tipodeevento:{
         type: db.Sequelize.STRING,
         allowNull: false,
     },
     endereco:{
-        type: db.Sequelize.STRING,
-        allowNull: false,
-    },
-    enderecoimagemcapa:{
         type: db.Sequelize.STRING,
         allowNull: false,
     },
@@ -32,5 +28,5 @@ const Event = db.sequelize.define('eventos',{
 });
 
 //forçar criação de tabela ----
-//Event.sync({force:true});
+Event.sync({force:true});
 module.exports = Event;

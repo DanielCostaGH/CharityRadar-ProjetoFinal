@@ -63,12 +63,47 @@ app.get('/eventos', (req, res) => {
 app.get('/criarEv', (req, res) => {
     res.render('criarEvento');
 });
+app.get('/editarEv', (req, res) => {
+    res.render('editarEvento');
+});
+app.get('/editarC', (req, res) => {
+    res.render('editarCadastro');
+});
 app.get('/falha', (req, res) => {
     res.send('falhou');
 });
-//app.post("/cadastroevento",uploadImage.fields())=>{
- //   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
-//}
+
+// ======================= cadastro de eventos (INICIO) =======================
+app.post("/cadastroevento",uploadImage.fields([
+    { name: "imagemcapa", maxCount: 1 },
+    { name: "imagens", maxCount: 3 }]),
+    function (req, res) {
+   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
+   
+    // ======================= junção do endereço (INICIO) =======================
+   const endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
+    // ======================= junção do endereço (FINAL) =======================
+ 
+   postu.create({
+    name: nome,
+    numero: numero,
+    tipodeevento: tipo,
+    endereco: endereco,
+    enderecoimagens: './public/imagensUser',
+    descricao: descricao,
+   
+})
+res.send('falhou');
+// .then(() => {
+//     console.log(" Post criado com sucesso ")
+//     res.render('inicial', {success_msg: 'Cadastro criado com sucesso'});
+// }).catch((erro) => {
+//     req.flash('error_msg','Houve um erro , tente novamente ');
+//     console.log(" Houve um erro: " + erro);
+// });
+ });
+// ======================= cadastro de eventos (FINAL) =======================
+
 app.get('/logado', (req, res) => {
     res.render('inicial')
 });
@@ -76,7 +111,7 @@ app.get('/faq', (req, res) => {
     res.render('faq')
 });
 app.post("/cadastroU", async (req, res) => {
-//---------------
+
 
     // validação e cadastro
     const { nome, email, senha, senhaC } = req.body;

@@ -857,7 +857,7 @@ a {
     border: 1px solid rgb(204, 204, 204);
 }
 
-.inputClass:focus{
+.inputClass:hover{
     box-shadow:0 0 5px 2px #267ef2;
     outline: none;
 }
@@ -878,10 +878,96 @@ a {
     box-shadow:0 0 5px 2px #267ef2;
     outline: none;
 }
-
-
-
 /*================================= CRIAR EVENTOS (FINAL) ======================================*/
+/*================================= EDITAR EVENTOS (INICIO) ======================================*/
+
+#mainContentCev{
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+#mainContentCev h1{
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'titin';
+    margin-top: 0;
+    padding-top: 2%;
+}
+#formPlace{
+    width: 70%;
+}
+
+#buttonCev{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    padding-top: 3%;
+}
+.btnCev{
+    background-color: #fff;
+}
+.btnCev:focus{
+    box-shadow:0 0 5px 2px #267ef2;
+    outline: none;
+}
+/*================================= EDITAR EVENTOS (FINAL) ======================================*/
+/*================================= EDITAR CADASTRO (INICIO) ======================================*/
+
+#bodyEdCadastro{
+    height: 650px;
+    width: 100%;
+}
+#mainContentCad{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 4%;
+    height: 80%;
+    width: 60%;
+    background-color: rgb(238, 238, 238);
+    padding: 2%;
+    box-shadow:0 0 10px 3px black ;
+}
+#mainContentCad h1{
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'titin';
+    margin-top: 0;
+    padding-top: 2%;
+}
+.form-Ed{
+    position: relative;
+}
+.input-ed input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+}
+
+/* .icon-ed{
+    position: absolute;
+    color: #999;
+    font-size: 23px;
+    left: 0;
+}
+.input-ed i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+} */
+
+
+
+
+
+
+/*================================= EDITAR CADASTRO (INICIO) ======================================*/
 
 
 
