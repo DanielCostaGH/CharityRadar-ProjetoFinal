@@ -1,9 +1,11 @@
 const localstrategy = require('passport-local').Strategy;
 const bcrypt= require('bcryptjs');
+
 //models e dados 
 const models= require('../Banco de Dados/models/db');
 const PostUser = require('../Banco de Dados/models/PostUser');
 //--------
+
 
 //logica do login no js
 /**
@@ -21,14 +23,14 @@ module.exports = function(passport){
             }
             const usuario = ref.toJSON();
             
-            console.log(usuario, usuario.senha);
+            
             if(!usuario){
                 return done (null,false,{message: ' Credenciais inválidas'})
             }
 
             bcrypt.compare(senha,usuario.senha,(erro,bate) =>{
                 if(bate){
-                    done(null,{id: usuario.id });
+                    done(null,{id: usuario.id, nome: usuario.name });
                 }else{
                     return done(null,false,{message: " Credenciais inválidas senha"})
                 }

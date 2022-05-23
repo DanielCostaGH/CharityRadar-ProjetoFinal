@@ -28,5 +28,5 @@ const Event = db.sequelize.define('eventos',{
 });
 
 //forçar criação de tabela ----
-Event.sync({force:true});
+//Event.sync({force:true});
 module.exports = Event;
