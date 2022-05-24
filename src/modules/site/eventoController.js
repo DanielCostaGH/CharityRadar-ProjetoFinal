@@ -15,27 +15,28 @@ exports.editareventos = (req, res) => {
 
 
 
-exports.cadastroevento = uploadImage.fields([
+exports.cadastroeventoMutterMiddleware = uploadImage.fields([
     { name: "imagemcapa", maxCount: 1 },
-    { name: "imagens", maxCount: 3 }]),
-    function (req, res) {
-   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
-   
-    // ======================= junção do endereço (INICIO) =======================
-   const endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
-    // ======================= junção do endereço (FINAL) =======================
- 
-   PostEvent.create({
-    name: nome,
-    numero: numero,
-    tipodeevento: tipo,
-    endereco: endereco,
-    enderecoimagens: './public/imagensUser',
-    descricao: descricao,
-   
-})
-res.send('/');
+    { name: "imagens", maxCount: 3 }
+]);
 
+exports.cadastroevento = function (req, res) {
+    const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
+    console.log(req.body);
+    
+        // ======================= junção do endereço (INICIO) =======================
+    const endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
+        // ======================= junção do endereço (FINAL) =======================
+    
+    PostEvent.create({
+        name: nome,
+        numero: numero,
+        tipodeevento: tipo,
+        endereco: endereco,
+        enderecoimagens: './public/imagensUser',
+        descricao: descricao,
+    })
+    res.send('/');
 };
 
 // exports.editouEvento = async(req, res) => {
