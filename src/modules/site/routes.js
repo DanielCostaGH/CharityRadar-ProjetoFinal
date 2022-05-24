@@ -1,16 +1,30 @@
 const { Router } = require('express');
 const controller = require("./controller");
-
+const eventoController = require("./eventoController");
+const userController = require("./userController");
 
 const SiteRoutes = Router();
 
-SiteRoutes.post("/cadastrar", controller.cadastrar);
-SiteRoutes.post("/logar", controller.logar);
+
 SiteRoutes.get('/',controller.inicial);
 SiteRoutes.get('/eventos',controller.eventos);
-SiteRoutes.get('/criarEv',controller.criarevento);
-SiteRoutes.get('/editarEv',controller.editareventos);
-SiteRoutes.get('/editarC',controller.editarCadastro);
 SiteRoutes.get('/faq',controller.faq);
+
+//----- insertion,editions and delete routes---------
+SiteRoutes.post('/cadastroevento',eventoController.cadastroevento);
+SiteRoutes.get('/criarEv',eventoController.criarevento);
+SiteRoutes.get('/editarEv',eventoController.editareventos);
+// SiteRoutes.post('/editouEvento',eventoController.editouEvento);
+SiteRoutes.get('/editarC',userController.editarCadastro);
+SiteRoutes.post('/editouCadastro',userController.editouCadastro);
+// SiteRoutes.post('/deletaCadastro',userController.deletacadastro);
+//---------------------------------------------------
+
+
+//----- login routes---------
+SiteRoutes.post("/cadastrar", userController.cadastrar);
+SiteRoutes.post("/logar", userController.logar);
+SiteRoutes.get('/deslogar',userController.deslogar);
+//---------------------------
 
 module.exports = SiteRoutes;

@@ -3,12 +3,10 @@ const app = express();
 const User = require('./Banco de Dados/models/db');
 const handlebars = require('express-handlebars');
 const bodyparser = require('body-parser');
-const PostEvent = require('./Banco de Dados/models/PostEvent');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
 require('./control/auth')(passport);
-const uploadImage = require('./src/middlewares/uploadimage');
 const SiteRoutes = require('./src/modules/site/routes');
 
 //session para acessar os cookies
@@ -52,29 +50,6 @@ app.use(express.static('public'));
 //--------
 
 //Paginas ----- rotas 
-
-app.post("/cadastroevento",uploadImage.fields([
-    { name: "imagemcapa", maxCount: 1 },
-    { name: "imagens", maxCount: 3 }]),
-    function (req, res) {
-   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao} = req.body;
-   
-    // ======================= junção do endereço (INICIO) =======================
-   const endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
-    // ======================= junção do endereço (FINAL) =======================
- 
-   PostEvent.create({
-    name: nome,
-    numero: numero,
-    tipodeevento: tipo,
-    endereco: endereco,
-    enderecoimagens: './public/imagensUser',
-    descricao: descricao,
-   
-})
-res.send('opa');
-
- });
 
 app.use(SiteRoutes);
 
