@@ -1,4 +1,5 @@
 const db = require('../models/db');
+const PostUser = require("../models/PostUser");
 
 const Event = db.sequelize.define('eventos',{
     name:{
@@ -24,7 +25,17 @@ const Event = db.sequelize.define('eventos',{
     descricao:{
         type: db.Sequelize.STRING,
         allowNull: false,
-    }
+    },
+
+});
+
+Event.belongsTo(PostUser,{
+    constraint:true,
+    foreignkey:"usuario_id"
+});
+
+PostUser.hasMany(Event,{
+    foreignKey:"usuario_id"
 });
 
 //forçar criação de tabela ----

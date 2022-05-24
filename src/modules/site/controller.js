@@ -3,15 +3,10 @@ const passport = require('passport');
 const User = require('../../../Banco de Dados/models/db');
 
 
-
 exports.inicial = (req, res) => {
-    let estaLogado;
+    let estaLogado = "Acesse sua conta";
     if (req.user){
-        var saudacoes = " Bem vindo " + req.user.nome;
-        estaLogado = saudacoes;
-    }
-    else {
-        estaLogado = "Acesse sua conta";
+        estaLogado = " Bem vindo " + req.user.nome;
     }
     res.render('inicial', {
         logadoounao: estaLogado,
@@ -19,13 +14,9 @@ exports.inicial = (req, res) => {
 }
 
 exports.eventos = (req, res) => {
-    let estaLogado;
+    let estaLogado = "Acesse sua conta";
     if (req.user){
-        var saudacoes = " Bem vindo " + req.user.nome;
-        estaLogado = saudacoes;
-    }
-    else {
-        estaLogado = "Acesse sua conta";
+        estaLogado = " Bem vindo " + req.user.nome;
     }
     res.render('eventos', {
         logadoounao: estaLogado,
@@ -33,15 +24,12 @@ exports.eventos = (req, res) => {
 }
 
 exports.faq =(req, res) => {
-    let estaLogado;
+    let estaLogado = "Acesse sua conta";
     if (req.user){
-        var saudacoes = " Bem vindo " + req.user.nome;
-        estaLogado = saudacoes;
-    }
-    else {
-        estaLogado = "Acesse sua conta";
+        estaLogado = " Bem vindo " + req.user.nome;
     }
     res.render('faq', {
         logadoounao: estaLogado,
     });
 }
+
