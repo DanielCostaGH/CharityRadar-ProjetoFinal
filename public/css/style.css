@@ -826,6 +826,11 @@ a {
     margin: 0 auto;
     padding: 2%;
 }
+.divslabel{
+    width: 98%;
+    position: relative;
+    display:block;
+}
 #divAnexo{
     background-color: white;
     padding: 1%;
@@ -868,6 +873,9 @@ a {
     margin: 0 1% 0 1%;
     width: 98%;
 }
+#inputDesc textarea{
+    height: 90px;
+}
 #buttonEv{
     display: flex;
     justify-content: end;
@@ -877,6 +885,9 @@ a {
 .btnEv:focus{
     box-shadow:0 0 5px 2px #267ef2;
     outline: none;
+}
+.form-control{
+    resize: none;
 }
 /*================================= CRIAR EVENTOS (FINAL) ======================================*/
 /*================================= EDITAR EVENTOS (INICIO) ======================================*/
