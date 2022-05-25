@@ -13,6 +13,10 @@ exports.editareventos = (req, res) => {
     res.render('editarEvento');
 }
 
+exports.meuseventos = (req, res) => {
+    res.render('meusEventos');
+}
+
 
 
 exports.cadastroeventoMutterMiddleware = uploadImage.fields([

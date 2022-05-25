@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Evento</title>
+    <title>Charity Radar</title>
     <link rel="icon" href="/img/favicon.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,13 +46,13 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/eventos">Únicos</a></li>
-                                <li><a class="dropdown-item" href="#">Frequentes</a></li>
+                                <li><a class="dropdown-item" href="/eventos">Frequentes</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
-                                <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
                                 <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
+                                <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
                                 <li><a class="dropdown-item" href="/editarC">Editar Cadastro</a></li>
                                 <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
                             </ul>
@@ -71,13 +71,13 @@
         </nav>
     </header>
 
-    
+    {{!-- ============================= Conteúdo da pagina ========================= --}}
     <div id="body-contentEv">
-        
+
         <section id="barraLateralEv">
             <div id="txt_lateral_Ev">
                 <h6 id="iconEvent"><i class="bi bi-calendar2-event"></i></h6>
-                <h1>Edite o seu evento.</h1>
+                <h1>Aqui estão seus eventos</h1>
                 <p>"Gostaríamos de salientar que é impressionante o serviço que vocês fazem. É ótimo ter a oportunidade
                     de
                     trabalhar com vocês.
@@ -87,65 +87,68 @@
                 <h5>Equipe de desenvolvedores - Charity Radar</h5>
             </div>
         </section>
-
         <section id="mainContentEv">
-            <h1>Editar evento</h1>
-            <form action="/cadastroevento" method='post' enctype="multipart/form-data">
-                <div id="formPlace">
-                    <div id="formEv">
-                        <div class="divInputs input-group mb-3">
-                            <input type="text" name='nome' class="form-control inputClass" placeholder="Nome do evento">
-                            <input type="text" name='numero' class="form-control inputClass"
-                                placeholder="Número para contato (Opicional)">
-                        </div>
-                        <div class="divSelects input-group mb-3">
-                            <select name='tipo' class="form-select inputClass">
-                                <option selected>Selecione o tipo de evento</option>
-                                <option value="unico">Unico</option>
-                                <option value="frequente">Frequente</option>
-                            </select>
-                            <select name='cidade' class="form-select inputClass">
-                                <option selected>Selecione a Cidade</option>
-                                <option value="unico">Belo Horizonte</option>
-                            </select>
-                        </div>
-                        <div class="divInputs input-group mb-3">
-                            <input name='rua' type="text" class="form-control inputClass"
-                                placeholder="Endereço do evento (Rua, Bairro e número)">
-                            <input type="text" name='bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
-                            <input type="text" name='numerorua' id="numEnd" class="inputClass" placeholder="Número">
-                        </div>
-                        <div id="inputDesc" class="input-group">
-                            <span class="input-group-text">Descrição do evento</span>
-                            <textarea name='descricao' id="" class="form-control inputClass"></textarea>
-                        </div>
-                        <div id="buttonEv">
-                            <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>
-                            <button type="submit" class="btnExcluir btnEv btn btn-outline-danger">Excluir Evento</button>
-                        </div>
-                    </div>
-
-                </div>
-            </form>
+            <h1>Meus eventos</h1>
+            <div class="div-table">
+            <table class="table table-sm table-striped table-hover">
+                
+                <tbody>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col"><h3>Evento {..}</h3></td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            </div>
         </section>
 
     </div>
 
 
-<!-- Rodapé -->
-  <footer class="mt-auto container-fluid bg-dark d-flex align-items-center">
-
-    <div class="centerP">
-      <p>@copryght Cheryt Radar</p>
-    </div>
-
-  </footer>
 
 
 
-    {{!-- ------------------------------------------------------------------------------------ --}}
 
-    <script src="../js/usability.js"></script>
+
+
+
+
+
+
+
+
+
+    <!-- Rodapé -->
+    <footer class="mt-auto container-fluid bg-dark d-flex align-items-center">
+
+        <div class="centerP">
+            <p>@copryght Cheryt Radar</p>
+        </div>
+
+    </footer>
+    {{!--
+    <script src="../js/usability.js"></script> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

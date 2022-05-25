@@ -1,4 +1,5 @@
-
+const logadoounao = document.getElementById('nav-linkblue').innerText;
+if(logadoounao == '' || logadoounao == "Acesse sua conta"){
 const container = document.querySelector(".container"),
       pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields = document.querySelectorAll(".password"),
@@ -49,6 +50,20 @@ const container = document.querySelector(".container"),
         iniciaModal('modal-popup'));
         
 // ================================================= Cadastro =====================================
-function Cadastastrar(){
-    
+
+}else {
+    function iniciaModal(modalID){
+        const modal = document.getElementById(modalID);
+        modal.classList.add('mostrar');
+        modal.classList.add('option-show');
+        modal.addEventListener('click', (e)=> {
+            if(e.target.id == modalID || e.target.className != 'menuOptionBar'){
+                modal.classList.remove('mostrar')
+            }
+        })
+        }
+
+        const accAcess = document.querySelector('.accAcess');
+        accAcess.addEventListener('click', () => 
+        iniciaModal('barraOptions'));
 }

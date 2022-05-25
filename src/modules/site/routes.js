@@ -13,6 +13,7 @@ SiteRoutes.get('/faq',controller.faq);
 //----- insertion,editions and delete routes---------
 SiteRoutes.post('/cadastroevento', eventoController.cadastroeventoMutterMiddleware, eventoController.cadastroevento);
 SiteRoutes.get('/criarEv',eventoController.criarevento);
+SiteRoutes.get('/meusEv',eventoController.meuseventos);
 SiteRoutes.get('/editarEv',eventoController.editareventos);
 // SiteRoutes.post('/editouEvento',eventoController.editouEvento);
 SiteRoutes.get('/editarC',userController.editarCadastro);

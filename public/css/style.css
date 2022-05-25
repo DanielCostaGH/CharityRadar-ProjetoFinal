@@ -34,6 +34,7 @@ body {
 
 
 
+
 @font-face {
     font-family: 'titin';
     src: url('/abraham/1\ Abraham.otf') format('opentype');
@@ -393,6 +394,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover{
     background: #4771e4;
+}
+.main-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00a2ff;
+    height: 300px;
+    width: 400px;
+    z-index: 2190;
 }
 /*================================= PAGINAS DE EVENTOS (FINAL) ======================================*/
 
@@ -849,7 +859,7 @@ a {
     margin: 0 1% 0 1%;
 }
 #numEnd{
-    width: 10%;
+    width: 12%;
     border: none;
     padding: 1%;
     border-radius: 10%, 10%, 10%, 10%;
@@ -863,7 +873,7 @@ a {
 }
 
 .inputClass:hover{
-    box-shadow:0 0 5px 2px #267ef2;
+    box-shadow:0 0 2px 1px #313131;
     outline: none;
 }
 .inputClass{
@@ -924,6 +934,9 @@ a {
     box-shadow:0 0 5px 2px #267ef2;
     outline: none;
 }
+.btnExcluir{
+    margin-left: 5%;
+}
 /*================================= EDITAR EVENTOS (FINAL) ======================================*/
 /*================================= EDITAR CADASTRO (INICIO) ======================================*/
 
@@ -978,8 +991,62 @@ a {
 
 
 
-/*================================= EDITAR CADASTRO (INICIO) ======================================*/
+/*================================= EDITAR CADASTRO (FINAL) ======================================*/
+/*================================= BARRA LATERAL (INICIO) ======================================*/
+#barraOptions{
+    position: fixed;
+    top: 14%;
+    right: 0;
+    height: 600px;
+    width: 280px;
+    background-color: #00a2ff;
+    z-index: 20;
+}
+.option-show{
+    display: none;
+}
+.option-show.mostrar{
+    display:flex;
+}
+.li-bar{
+    position: relative;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+/*================================= BARRA LATERAL (FINAL) ======================================*/
+/*================================= MEUS EVENTOS (INICIO) ======================================*/
+.div-table{
+    margin: 0 auto;
+    width: 80%;
+    height: 500px;
+    overflow-y: auto;
+}
+thead tr th{
+    text-align: center;
+}
+thead tr{
+    height: 80px;
+}
 
+  tbody tr td{
+    text-align: center;
+    
+    
+  }
+  tbody tr{ 
+      height: 120px;
+  }
+  
+
+
+
+
+
+
+
+/*================================= MEUS EVENTOS (INICIO) ======================================*/
 
 
 /*================================= FOOTER (--) ======================================*/
@@ -996,6 +1063,7 @@ footer p {
 
 footer {
     height: 15vh;
+    z-index: 30;
 }
 
 #footer {

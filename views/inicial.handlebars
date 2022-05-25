@@ -35,7 +35,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">sobre</a>
+              <a class="nav-link" href="#sobreId">sobre</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -51,24 +51,20 @@
                 </li>
                 <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
                 <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
+                <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
                 <li><a class="dropdown-item" href="/editarC">Editar Cadastro</a></li>
                 <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-
-
               <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
-
-
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-
 
   <!-- Conteúdo principal -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -130,7 +126,7 @@
   </div>
 
   {{!-- SOBRE --}}
-  <section class="secSobre">
+  <section id="sobreId" class="secSobre">
     <div class="leftSobre">
       <div class="txtSobre">
 
@@ -238,6 +234,29 @@
       </div>
     </div>
   </div>
+
+
+
+
+  {{!-- BARRA DE OPÇÕES PÓS LOGIN --}}
+
+  <section id="barraOptions" class="option-show">
+    <div class="menuOptionBar">
+      <ul>
+        <li class="li-bar"></li>
+        <li class="li-bar"></li>
+        <li class="li-bar"></li>
+        <li class="li-bar"></li>
+      </ul>
+    </div>
+
+  </section>
+
+
+
+
+  {{!-- BARRA DE OPÇÕES PÓS LOGIN --}}
+
   {{!-- ------------------------------------------------------------------------------------ --}}
 
   <script src="../js/usability.js"></script>
