@@ -1000,20 +1000,26 @@ a {
     height: 600px;
     width: 280px;
     background-color: #00a2ff;
-    z-index: 20;
 }
-.option-show{
-    display: none;
-}
-.option-show.mostrar{
-    display:flex;
-}
+
 .li-bar{
     position: relative;
     justify-content: space-around;
     display: flex;
     margin-top: 15%;
     margin-bottom: 15%;
+}
+.modal-bar{
+    display: none;
+    top: 96px;
+    left: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+}
+.modal-bar.mostrar{
+    display: flex;
 }
 /*================================= BARRA LATERAL (FINAL) ======================================*/
 /*================================= MEUS EVENTOS (INICIO) ======================================*/
@@ -1022,6 +1028,8 @@ a {
     width: 80%;
     height: 500px;
     overflow-y: auto;
+    border-radius: 1vh 0vh 0vh 1vh;
+    box-shadow:0 0 5px 3px black ;
 }
 thead tr th{
     text-align: center;
@@ -1032,8 +1040,7 @@ thead tr{
 
   tbody tr td{
     text-align: center;
-    
-    
+    vertical-align:middle;
   }
   tbody tr{ 
       height: 120px;

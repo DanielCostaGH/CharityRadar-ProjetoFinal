@@ -49,7 +49,7 @@ const container = document.querySelector(".container"),
         accAcess.addEventListener('click', () => 
         iniciaModal('modal-popup'));
         
-// ================================================= Cadastro =====================================
+// ================================================= PUXAR BARRA LATERAL =====================================
 
 }else {
     function iniciaModal(modalID){
@@ -57,7 +57,7 @@ const container = document.querySelector(".container"),
         modal.classList.add('mostrar');
         modal.classList.add('option-show');
         modal.addEventListener('click', (e)=> {
-            if(e.target.id == modalID || e.target.className != 'menuOptionBar'){
+            if(e.target.id == modalID){
                 modal.classList.remove('mostrar')
             }
         })
@@ -65,5 +65,5 @@ const container = document.querySelector(".container"),
 
         const accAcess = document.querySelector('.accAcess');
         accAcess.addEventListener('click', () => 
-        iniciaModal('barraOptions'));
+        iniciaModal('modal-barId'));
 }
