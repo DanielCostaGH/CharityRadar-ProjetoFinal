@@ -67,3 +67,20 @@ const container = document.querySelector(".container"),
         accAcess.addEventListener('click', () => 
         iniciaModal('modal-barId'));
 }
+
+
+// ======================= MODAL EDITAR CADASTRO =====================
+
+function iniciaModalCadastro(modalID){
+    const modal = document.getElementById(modalID);
+    modal.classList.add('mostrar');
+    modal.addEventListener('click', (e)=> {
+        if(e.target.id == modalID || e.target.className == 'uil uil-multiply'){
+            modal.classList.remove('mostrar')
+        }
+    })
+    }
+
+    const accAcess = document.querySelector('.modal-editCadastro');
+    accAcess.addEventListener('click', () => 
+    iniciaModalCadastro('modal-edCadastro'));

@@ -62,10 +62,6 @@ exports.deslogar = function(req, res){
     res.redirect('/');
 }
 
-exports.editarCadastro =(req, res) => {
-    res.render('editarCadastro');
-
-}
 
 exports.editouCadastro = async(req, res) => {
     let feito;

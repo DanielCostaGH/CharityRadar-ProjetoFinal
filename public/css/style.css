@@ -940,7 +940,57 @@ a {
 /*================================= EDITAR EVENTOS (FINAL) ======================================*/
 /*================================= EDITAR CADASTRO (INICIO) ======================================*/
 
-#bodyEdCadastro{
+.modal-editarEv{
+    display: none;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(58, 58, 58, 0.589);
+    z-index: 4000;
+}
+.modal-editarEv.mostrar{
+    display: flex;
+}
+.container{
+    z-index: 5000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+/* #bodyEdCadastro{
     height: 650px;
     width: 100%;
 }
@@ -972,7 +1022,7 @@ a {
     border: none;
     outline: none;
     border-bottom: 2px solid #ccc;
-}
+} */
 
 /* .icon-ed{
     position: absolute;

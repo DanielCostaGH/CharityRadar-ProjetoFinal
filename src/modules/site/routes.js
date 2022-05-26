@@ -16,7 +16,6 @@ SiteRoutes.get('/criarEv',eventoController.criarevento);
 SiteRoutes.get('/meusEv',eventoController.meuseventos);
 SiteRoutes.get('/editarEv',eventoController.editareventos);
 // SiteRoutes.post('/editouEvento',eventoController.editouEvento);
-SiteRoutes.get('/editarC',userController.editarCadastro);
 SiteRoutes.post('/editouCadastro',userController.editouCadastro);
 // SiteRoutes.post('/deletaCadastro',userController.deletacadastro);
 //---------------------------------------------------
