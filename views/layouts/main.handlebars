@@ -1,5 +1,5 @@
 {{#each erros}}
-    <div style="position: absolute; top: 40%; left: 40%; z-index:5;" class ='alert alert-danger'>{{texto}}</div>
+<div style="position: absolute; top: 40%; left: 40%; z-index:5;" class='alert alert-danger'>{{texto}}</div>
 
 {{else}}
 
@@ -7,11 +7,184 @@
 
 
 {{#if success_msg}}
-    <div style="position: absolute; top: 40%; left: 40%; z-index:5;" class ='alert alert-success'>{{success_msg}}</div>
+<div style="position: absolute; top: 40%; left: 40%; z-index:5;" class='alert alert-success'>{{success_msg}}</div>
 {{/if}}
 {{#if error_msg}}
-    <div style="position: absolute; top: 40%; left: 40%; z-index:5;" class = 'alert alert-danger'>{{error_msg}}</div>
+<div style="position: absolute; top: 40%; left: 40%; z-index:5;" class='alert alert-danger'>{{error_msg}}</div>
 {{/if}}
 
 {{{body}}}
 
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- logo -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img id="logo1" src="/img/logo.png" class="img-fluid" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Barra de navegação -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="navbarItems" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li id="nav-link1" class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#sobreId">sobre</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Eventos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/eventos">Únicos</a></li>
+                            <li><a class="dropdown-item" href="#">Frequentes</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
+                            <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
+                            <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
+                            <li><a class="dropdown-item  modal-editCadastro">Editar Cadastro</a></li>
+                            <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+{{!-- ==================== MODAL DE LOGIN E CADASTRO (INICIO) ====================== --}}
+{{!------MODAL DE LOGIN (INICIO) ------}}
+<div id="modal-popup" class="modal-container">
+    <div class="container">
+        <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="/logar" method='post'>
+                    <div class="input-field">
+                        <input type="text" name="email" placeholder="Entrar com email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="senha" class="password" placeholder="Digite sua senha" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Entrar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Não possui conta?
+                        <a href="#" class="text signup-link">Criar conta</a>
+                    </span>
+                </div>
+            </div>
+            {{!------MODAL DE CADASTRO (INICIO) ------}}
+            <div class="form signup">
+                <span class="title">Cadastro</span>
+
+                <form action="/cadastrar" method='post'>
+                    <div class="input-field">
+                        <input type="text" name='nome' placeholder="Seu nome" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name='email' placeholder="Seu email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name='senha' class="password" placeholder="Criar uma senha" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name='senhaC' class="password" placeholder="Confirmar senha" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+
+                    <div class="input-field button">
+                        <input type="submit" value="Criar conta">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Ja tem uma conta?
+                        <a href="#" class="text login-link">Fazer Login</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- ==================== MODAL DE LOGIN E CADASTRO (FINAL) ====================== --}}
+{{!-- ==================== MODAL BARRA LATERAL OPTIONS (INICIO) ====================== --}}
+
+<div id="modal-barId" class="modal-bar">
+    <section id="barraOptions" class="">
+        <div class="menuOptionBar">
+            <ul>
+                <li class="li-bar"></li>
+                <li class="li-bar"></li>
+                <li class="li-bar"></li>
+                <li class="li-bar"></li>
+            </ul>
+        </div>
+
+    </section>
+</div>
+{{!-- ==================== MODAL BARRA LATERAL OPTIONS (FINAL) ====================== --}}
+{{!-- ==================== MODAL EDITAR CADASTRO (INICIO) ====================== --}}
+
+<div id="modal-edCadastro" class="modal-editarEv">
+    <div class="container">
+        <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Editar Cadastro</span>
+
+                <form action="/editouCadastro" method='post'>
+                    <div class="input-field">
+                        <input type="text" name="nome" placeholder="Alterar nome" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="senha" class="password" placeholder="Nova senha" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Entrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        {{!-- ==================== MODAL EDITAR CADASTRO (FINAL) ====================== --}}
+        <script src="../js/usability.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"> </script>
