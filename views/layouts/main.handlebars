@@ -14,17 +14,18 @@
 {{/if}}
 
 {{head}}
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/img/favicon.jpg" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.jpg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 
 {{header}}
@@ -72,6 +73,10 @@
 
                     <li class="nav-item">
                         <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
+
+                        <a id="nav-linkblue2" class="nav-link accAcess2 hide" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                            href="#offcanvasExample">{{logadoounao}}</a>
                     </li>
                 </ul>
             </div>
@@ -156,18 +161,84 @@
 {{!-- ==================== MODAL BARRA LATERAL OPTIONS (INICIO) ====================== --}}
 
 <div id="modal-barId" class="modal-bar">
-    <section id="barraOptions" class="">
-        <div class="menuOptionBar">
-            <ul>
-                <li class="li-bar"></li>
-                <li class="li-bar"></li>
-                <li class="li-bar"></li>
-                <li class="li-bar"></li>
-            </ul>
+
+    <div class="offcanvas offcanvas-end d-flex flex-column flex-shrink-0 p-3 bg-light" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel" style="width: 280px;">
+
+        <div class="d-block p-3 link-dark text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right">
+
+            <h1 class="d-inline-block mx-3"><i class="bi bi-person-circle"></i></h1>
+            <span class="fs-4">Bem vindo!</span>
+            <hr>
         </div>
 
-    </section>
+
+        {{!-- <div class="d-flex align-items-center ml-auto mr-auto px-2" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="#offcanvasExample">
+            <h1><i class="bi bi-backspace-reverse" style="cursor: pointer;"></i></h1>
+        </div> --}}
+
+        <ul class="nav nav-pills flex-column mb-auto mx-0 px-0">
+
+            <li class="my-3">
+
+                <a class="nav-link link-dark d-block modal-editCadastro">
+                    <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-pencil-square"></i></h3>
+                    Editar Cadastro
+                </a>
+            </li>
+
+            <li class="my-3">
+                <a href="/criarEv" class="nav-link link-dark">
+                    <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-plus-square"></i></h3>
+                    Criar Evento
+                </a>
+            </li>
+            <li class="my-3">
+                <a href="/editarEv" class="nav-link link-dark">
+                    <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-credit-card-2-front"></i></h3>
+                    Editar Evento
+                </a>
+            </li>
+            <li class="my-3">
+                <a href="/meusEv" class="nav-link link-dark">
+                    <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-card-checklist"></i></h3>
+                    Meus eventos
+                </a>
+            </li>
+        </ul>
+
+        <div class="d-block p-3 deslogAcc">
+            <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-box-arrow-right"></i></h3>
+            <span>Sair</span>
+        </div>
+
+
+
+
+
+
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {{!-- ==================== MODAL BARRA LATERAL OPTIONS (FINAL) ====================== --}}
 {{!-- ==================== MODAL EDITAR CADASTRO (INICIO) ====================== --}}
 

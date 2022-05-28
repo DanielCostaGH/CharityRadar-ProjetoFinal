@@ -14,7 +14,7 @@ body {
     padding-right: 7vh;
 }
 
-.nav-link {
+nav .nav-link {
     margin-left: 5vh;
     font-size: 3vh;
     font-family: 'titin';
@@ -22,6 +22,10 @@ body {
 }
 
 #nav-linkblue {
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+}
+#nav-linkblue2 {
     color: rgb(0, 162, 255);
     cursor: pointer;
 }
@@ -1043,30 +1047,29 @@ a {
 
 /*================================= EDITAR CADASTRO (FINAL) ======================================*/
 /*================================= BARRA LATERAL (INICIO) ======================================*/
-#barraOptions{
-    position: fixed;
-    top: 14%;
-    right: 0;
-    height: 600px;
-    width: 280px;
-    background-color: #00a2ff;
+.hide{
+    display: none;
 }
 
-.li-bar{
-    position: relative;
-    justify-content: space-around;
-    display: flex;
-    margin-top: 15%;
-    margin-bottom: 15%;
+.modal-bar .nav-link {
+    padding-bottom: 5px;
+    font-size: 3vh;
+    font-family: 'titin';
+    letter-spacing: 0.1rem;
 }
-.modal-bar{
-    display: none;
-    top: 96px;
-    left: 0px;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2000;
+.modal-bar span{
+    font-size: 3vh;
+    font-family: 'titin';
+    letter-spacing: 0.1rem;
+}
+.modal-bar .nav-link:hover {
+    background-color: #267ef2;
+    color: #fff;
+}
+.deslogAcc:hover{
+    background-color: rgb(231, 80, 80);
+    color: #FFF;
+    border-radius: 1vh 1vh 1vh 1vh;
 }
 .modal-bar.mostrar{
     display: flex;
