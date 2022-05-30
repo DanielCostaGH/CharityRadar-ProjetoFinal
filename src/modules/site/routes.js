@@ -10,21 +10,21 @@ SiteRoutes.get('/',controller.inicial);
 SiteRoutes.get('/eventos',controller.eventos);
 SiteRoutes.get('/faq',controller.faq);
 
-//----- insertion,editions and delete routes---------
+//----- eventos routes---------
 SiteRoutes.post('/cadastroevento', eventoController.cadastroeventoMutterMiddleware, eventoController.cadastroevento);
 SiteRoutes.get('/criarEv',eventoController.criarevento);
 SiteRoutes.get('/meusEv',eventoController.meuseventos);
 SiteRoutes.get('/editarEv',eventoController.editareventos);
-// SiteRoutes.post('/editouEvento',eventoController.editouEvento);
-SiteRoutes.post('/editouCadastro',userController.editouCadastro);
-// SiteRoutes.post('/deletaCadastro',userController.deletacadastro);
+// SiteRoutes.put('/editouEvento',eventoController.editouEvento);
+
 //---------------------------------------------------
 
-
-//----- login routes---------
+//----- user(login,cadastro) routes---------
 SiteRoutes.post("/cadastrar", userController.cadastrar);
 SiteRoutes.post("/logar", userController.logar);
 SiteRoutes.get('/deslogar',userController.deslogar);
+SiteRoutes.put('/editouCadastro',userController.editouCadastro);
+SiteRoutes.delete('/deletaCadastro',userController.deletaCadastro);
 //---------------------------
 
 module.exports = SiteRoutes;

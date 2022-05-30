@@ -64,7 +64,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
-                            <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#exampleModal">Editar Evento</a></li>
                             <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
                             <li><a class="dropdown-item  modal-editCadastro">Editar Cadastro</a></li>
                             <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
@@ -172,20 +172,14 @@
             <hr>
         </div>
 
-
-        {{!-- <div class="d-flex align-items-center ml-auto mr-auto px-2" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="#offcanvasExample">
-            <h1><i class="bi bi-backspace-reverse" style="cursor: pointer;"></i></h1>
-        </div> --}}
-
         <ul class="nav nav-pills flex-column mb-auto mx-0 px-0">
 
             <li class="my-3">
 
-                <a class="nav-link link-dark d-block modal-editCadastro">
+                <button class="nav-link link-dark d-block " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas">
                     <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-pencil-square"></i></h3>
                     Editar Cadastro
-                </a>
+                </button>
             </li>
 
             <li class="my-3">
@@ -207,17 +201,18 @@
                 </a>
             </li>
         </ul>
-
         <div class="d-block p-3 deslogAcc">
-            <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-box-arrow-right"></i></h3>
-            <span>Sair</span>
+            <a href="deletacadastro" class="link-dark">
+                <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-box-arrow-right"></i></h3>
+                <span>Deletar conta</span>
+            </a>
         </div>
-
-
-
-
-
-
+        <div class="d-block p-3 deslogAcc">
+            <a href="/deslogar" class="link-dark">
+                <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-box-arrow-right"></i></h3>
+                <span>Sair</span>
+            </a>
+        </div>
     </div>
 </div>
 
@@ -237,35 +232,35 @@
 
 
 
-
-
 {{!-- ==================== MODAL BARRA LATERAL OPTIONS (FINAL) ====================== --}}
 {{!-- ==================== MODAL EDITAR CADASTRO (INICIO) ====================== --}}
-
-<div id="modal-edCadastro" class="modal-editarEv">
-    <div class="container">
-        <button id="btnFechar" class="fechar"><i class="uil uil-multiply"></i></button>
-        <div class="forms">
-            <div class="form login">
-                <span class="title">Editar Cadastro</span>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Editar Cadastro</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
                 <form action="/editouCadastro" method='post'>
-                    <div class="input-field">
-                        <input type="text" name="nome" placeholder="Alterar nome" required>
-                        <i class="uil uil-user"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" name="senha" class="password" placeholder="Nova senha" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
-
-                    <div class="input-field button">
-                        <input type="submit" value="Entrar">
+                    <div class="col-8 mx-auto my-auto p-1 modal-edCadastro">
+                        <input type="text" name='nome' class="form-control inputClass p-2 mb-4 "
+                            placeholder="Alterar Nome">
+                        <input type="password" name='senha' class="form-control inputClass p-2 mt-4  "
+                            placeholder="Nova Senha">
                     </div>
                 </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Deletar conta</button>
+                <button type="submit" class="btn btn-primary">Salvar Mudanças</button>
             </div>
         </div>
+    </div>
+</div>
+
 
 
         {{!-- ==================== MODAL EDITAR CADASTRO (FINAL) ====================== --}}

@@ -67,11 +67,11 @@ if (logadoounao == '' || logadoounao == "Acesse sua conta") {
 
 // ======================= MODAL EDITAR CADASTRO =====================
 
-function iniciaModalCadastro(modalID) {
-    const modal = document.getElementById(modalID);
+function iniciaModalCadastro(modalCad) {
+    const modal = document.getElementById(modalCad);
     modal.classList.add('mostrar');
     modal.addEventListener('click', (e) => {
-        if (e.target.id == modalID || e.target.className == 'uil uil-multiply') {
+        if (e.target.id == modalCad || e.target.className == 'uil uil-multiply') {
             modal.classList.remove('mostrar')
         }
     })

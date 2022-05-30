@@ -76,12 +76,14 @@ exports.editouCadastro = async(req, res) => {
              where: {
                 id : req.user.id
              }
-         
+           
              }).then(function(){
-                 res.render('editarCadastro',{
-                     logadoounao : " Cadastro editado com sucesso "});
+             setTimeout(function(){
+                res.render('inicial',{logadoounao : " Bem vindo " + req.user.nome});
+             },1000);
+                    
              }).catch(function(erro){
-                 res.render('editarCadastro',{});
+                 res.render('inicial',{});
              })
      }
          catch(err){
@@ -90,5 +92,17 @@ exports.editouCadastro = async(req, res) => {
      }
          
  }
+
+exports.deletaCadastro = async(req,res) => {
+            await PostUser.destroy({
+                 where:{ id: req.user.id }
+                });
+            req.logout();
+            res.redirect('/');
+            res.render('inicial',{
+                logadoounao : "Acesse sua conta"});
+
+}
+
 
 

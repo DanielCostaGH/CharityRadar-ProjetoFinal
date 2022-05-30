@@ -1,20 +1,25 @@
 const bcrypt = require('bcryptjs');
 const PostEvent = require('../../../Banco de Dados/models/PostEvent');
 const uploadImage = require('../../middlewares/uploadimage');
+const PostUser = require('../../../Banco de Dados/models/PostUser');
+const User = require('../../../Banco de Dados/models/db');
 
 
 
 exports.criarevento = (req, res) => {
-    res.render('criarEvento');
+    res.render('criarEvento',{logadoounao : " Bem vindo " + req.user.nome});
+    
 }
 
 
 exports.editareventos = (req, res) => {
-    res.render('editarEvento');
+    res.render('editarEvento',{logadoounao : " Bem vindo " + req.user.nome});
+    
 }
 
 exports.meuseventos = (req, res) => {
-    res.render('meusEventos');
+    res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome});
+    
 }
 
 

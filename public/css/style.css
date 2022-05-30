@@ -943,107 +943,10 @@ a {
 }
 /*================================= EDITAR EVENTOS (FINAL) ======================================*/
 /*================================= EDITAR CADASTRO (INICIO) ======================================*/
-
-.modal-editarEv{
-    display: none;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(58, 58, 58, 0.589);
-    z-index: 4000;
-}
-.modal-editarEv.mostrar{
-    display: flex;
-}
-.container{
-    z-index: 5000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
-}
-
-.container .forms{
-    display: flex;
-    align-items: center;
-    height: 440px;
-    width: 200%;
-    transition: height 0.2s ease;
-}
-
-
-.container .form{
-    width: 50%;
-    padding: 30px;
-    background-color: #fff;
-    transition: margin-left 0.18s ease;
-}
-
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
-}
-
-/* #bodyEdCadastro{
-    height: 650px;
-    width: 100%;
-}
-#mainContentCad{
-    position: relative;
-    margin: 0 auto;
-    margin-top: 4%;
-    height: 80%;
-    width: 60%;
-    background-color: rgb(238, 238, 238);
-    padding: 2%;
-    box-shadow:0 0 10px 3px black ;
-}
-#mainContentCad h1{
-    color: black;
-    text-align: center;
-    font-size: 3rem;
+.modal-header h2{
     font-family: 'titin';
-    margin-top: 0;
-    padding-top: 2%;
+    text-align: center;
 }
-.form-Ed{
-    position: relative;
-}
-.input-ed input{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #ccc;
-} */
-
-/* .icon-ed{
-    position: absolute;
-    color: #999;
-    font-size: 23px;
-    left: 0;
-}
-.input-ed i.showHidePw{
-    right: 0;
-    cursor: pointer;
-    padding: 10px;
-} */
-
-
-
-
-
 
 /*================================= EDITAR CADASTRO (FINAL) ======================================*/
 /*================================= BARRA LATERAL (INICIO) ======================================*/
@@ -1066,10 +969,19 @@ a {
     background-color: #267ef2;
     color: #fff;
 }
+/* .deslogAcc{
+    background-color: rgb(231, 80, 80);
+    border-radius: 1vh 1vh 1vh 1vh;
+} */
 .deslogAcc:hover{
     background-color: rgb(231, 80, 80);
-    color: #FFF;
     border-radius: 1vh 1vh 1vh 1vh;
+}
+.deslogAcc a{
+    color: rgb(39, 39, 39);
+}
+.deslogAcc a:hover{
+    color: #fff;
 }
 .modal-bar.mostrar{
     display: flex;
