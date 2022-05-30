@@ -23,8 +23,8 @@ SiteRoutes.get('/editarEv',eventoController.editareventos);
 SiteRoutes.post("/cadastrar", userController.cadastrar);
 SiteRoutes.post("/logar", userController.logar);
 SiteRoutes.get('/deslogar',userController.deslogar);
-SiteRoutes.put('/editouCadastro',userController.editouCadastro);
-SiteRoutes.delete('/deletaCadastro',userController.deletaCadastro);
+SiteRoutes.post('/editouCadastro',userController.editouCadastro);
+SiteRoutes.get('/deletaCadastro',userController.deletaCadastro);
 //---------------------------
 
 module.exports = SiteRoutes;

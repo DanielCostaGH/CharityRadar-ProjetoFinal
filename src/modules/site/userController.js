@@ -78,10 +78,8 @@ exports.editouCadastro = async(req, res) => {
              }
            
              }).then(function(){
-             setTimeout(function(){
-                res.render('inicial',{logadoounao : " Bem vindo " + req.user.nome});
-             },1000);
-                    
+                req.user.nome = req.body.nome;
+                res.render('inicial',{logadoounao : " Bem vindo " + req.user.nome});    
              }).catch(function(erro){
                  res.render('inicial',{});
              })
