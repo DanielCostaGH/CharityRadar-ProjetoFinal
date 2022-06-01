@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const User = require('./Banco de Dados/models/db');
 const handlebars = require('express-handlebars');
+app.set('view engine', 'handlebars');
 const bodyparser = require('body-parser');
 const session = require('express-session');
 const flash = require('connect-flash');

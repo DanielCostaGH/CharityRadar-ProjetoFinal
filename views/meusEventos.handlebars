@@ -6,61 +6,6 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    {{!-- <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- logo -->
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img id="logo1" src="../img/logo.png" class="img-fluid" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Barra de navegação -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="navbarItems" class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li id="nav-link1" class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#sobreId">sobre</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Eventos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/eventos">Únicos</a></li>
-                                <li><a class="dropdown-item" href="/eventos">Frequentes</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
-                                <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
-                                <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
-                                <li><a class="dropdown-item  modal-editCadastro">Editar Cadastro</a></li>
-                                <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-
-
-                            <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
-
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> --}}
-
     {{!-- ============================= Conteúdo da pagina ========================= --}}
     <div id="body-contentEv">
 
@@ -79,50 +24,62 @@
         </section>
         <section id="mainContentEv">
             <h1>Meus eventos</h1>
-            <div class="div-table">
-                <table class="table table-sm table-striped table-hover">
+            
+            <div cl>
 
-                    <tbody>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 1 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 2 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 3 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 4 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 5 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">
-                                <h3>Evento 6 example</h3>
-                            </td>
-                            <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                        </tr>
-                    </tbody>
+                {{#each result}}
+                <p>{{result}}. {{this}}</p>
+                {{/each}}
 
-                </table>
             </div>
+            
+            {{!-- <div class="eventos div-table">
+                
+            </div> --}}
+            {{!-- <table class="table table-sm table-striped table-hover">
+
+                <tbody>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 1 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 2 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 3 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 4 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 5 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="col">
+                            <h3>Evento 6 example</h3>
+                        </td>
+                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
+                    </tr>
+                </tbody>
+
+            </table> --}}
+
+
         </section>
 
     </div>
@@ -143,7 +100,8 @@
         </div>
 
     </footer>
-   
+
+
 </body>
 
 </html>

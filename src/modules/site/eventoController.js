@@ -17,9 +17,19 @@ exports.editareventos = (req, res) => {
     
 }
 
-exports.meuseventos = (req, res) => {
-    res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome});
-    
+exports.meuseventos = async(req, res) => {
+    // res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome});
+    const result = await PostEvent.findAll({
+        where: {
+            usuario_id: 7
+        },
+        raw: true,
+    }) .then((result) => {    
+    res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome, 
+               result: result.name
+             });
+             
+    });
 }
 
 
@@ -44,8 +54,9 @@ exports.cadastroevento = function (req, res) {
         endereco: endereco,
         enderecoimagens: './public/imagensUser',
         descricao: descricao,
-    })
-    res.send('/');
+        usuario_id: req.user.id
+    });
+    res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome});
 };
 
 // exports.editouEvento = async(req, res) => {

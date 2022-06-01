@@ -62,12 +62,6 @@
                             <li><a class="dropdown-item" href="#">Frequentes</a></li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
-                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
-                                    Evento</a></li>
-                            <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
-                            <li><a class="dropdown-item  modal-editCadastro">Editar Cadastro</a></li>
                             <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
                         </ul>
                     </li>
@@ -248,9 +242,9 @@
                 <form action="/editouCadastro" method='post'>
                     <div class="col-8 mx-auto my-auto p-1 modal-edCadastro">
                         <input type="text" name='nome' class="form-control inputClass p-2 mb-4 "
-                            placeholder="Alterar Nome">
+                            placeholder="Alterar Nome" required>
                         <input type="password" name='senha' class="form-control inputClass p-2 mt-4  "
-                            placeholder="Nova Senha">
+                            placeholder="Nova Senha" required>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Salvar Mudanças</button>
                         </div>
