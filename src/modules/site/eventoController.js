@@ -17,19 +17,18 @@ exports.editareventos = (req, res) => {
     
 }
 
-exports.meuseventos = async(req, res) => {
-    // res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome});
-    const result = await PostEvent.findAll({
-        where: {
-            usuario_id: 7
-        },
-        raw: true,
-    }) .then((result) => {    
-    res.render('meusEventos',{logadoounao : " Bem vindo " + req.user.nome, 
-               result: result.name
-             });
-             
-    });
+exports.meuseventos = function(req, res) {
+    
+        PostEvent.findAll({
+            where: {
+                usuario_id: req.user.id
+            },
+            raw: true,
+        }).then(function (eventos){
+            res.render('meusEventos',{eventos: eventos, logadoounao : " Bem vindo " + req.user.nome});
+        });
+ 
+     
 }
 
 

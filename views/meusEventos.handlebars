@@ -24,62 +24,23 @@
         </section>
         <section id="mainContentEv">
             <h1>Meus eventos</h1>
+        {{!------------------ Seção utilizada para mostrar os eventos que o usuário possui ----------------}}
             
-            <div cl>
+            {{#each eventos}}
+                <h1>{{name}}</h1>
+                <hr>
+            {{/each}}
+          
+        {{!------------------------------------------------------------------------------------------------}}
+            <div id="DocumentResults"></div>
+            <script id="document-template" type="text/x-handlebars-template">
 
-                {{#each result}}
-                <p>{{result}}. {{this}}</p>
-                {{/each}}
-
-            </div>
-            
-            {{!-- <div class="eventos div-table">
-                
-            </div> --}}
-            {{!-- <table class="table table-sm table-striped table-hover">
-
-                <tbody>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 1 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 2 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 3 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 4 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 5 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                    <tr>
-                        <td class="col">
-                            <h3>Evento 6 example</h3>
-                        </td>
-                        <td class="col"><button type="button" class="btn btn-outline-primary">Editar</button></td>
-                    </tr>
-                </tbody>
-
-            </table> --}}
+    
+       
+             </script>
 
 
+        
         </section>
 
     </div>

@@ -23,6 +23,7 @@ exports.eventos = (req, res) => {
     });
 }
 
+
 exports.faq =(req, res) => {
     let estaLogado = "Acesse sua conta";
     if (req.user){
