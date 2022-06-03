@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <title>Charity Radar</title>
@@ -23,24 +23,57 @@
             </div>
         </section>
         <section id="mainContentEv">
-            <h1>Meus eventos</h1>
-        {{!------------------ Seção utilizada para mostrar os eventos que o usuário possui ----------------}}
-            
-            {{#each eventos}}
-                <h1>{{name}}</h1>
-                <hr>
-            {{/each}}
-          
-        {{!------------------------------------------------------------------------------------------------}}
+
+            {{!------------------ Seção utilizada para mostrar os eventos que o usuário possui ----------------}}
+            <div style="height: 100%;" class="container col-12 mx-auto mb-5 bg-light p-5 overflow-auto ">
+                <h1 class="my-0 mb-1">Meus eventos</h1>
+                {{#each eventos}}
+
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-between">
+
+                            <div class="col-8">
+                                <h5 class="card-title col-8">{{name}}</h5>
+                            </div>
+                            <div class="col-2 py-auto">
+                                <form action="/editarEv/{{id}}" method="get">
+                                    <button type="submit" class="btn btn-outline-primary">Editar</button>
+                                </form>
+
+
+                            </div>
+                            <div class="col-2">
+                                <form action="/deletaEvento/{{id}}" method="get">
+                                    <button type="submit"
+                                        class="btnExcluir btnEv btn btn-outline-danger">Excluir</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{createdAt}}
+                    </div>
+                </div>
+
+
+                {{else}}
+                <h3>Nenhum Evento por aqui.</h3>
+
+
+                {{/each}}
+            </div>
+
+            {{!------------------------------------------------------------------------------------------------}}
             <div id="DocumentResults"></div>
             <script id="document-template" type="text/x-handlebars-template">
 
-    
-       
+
+
              </script>
 
 
-        
+
         </section>
 
     </div>

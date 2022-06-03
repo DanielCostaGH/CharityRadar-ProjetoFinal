@@ -6,60 +6,6 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    {{!-- <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- logo -->
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img id="logo1" src="../img/logo.png" class="img-fluid" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Barra de navegação -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="navbarItems" class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li id="nav-link1" class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#sobreId">sobre</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Eventos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/eventos">Únicos</a></li>
-                                <li><a class="dropdown-item" href="#">Frequentes</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/criarEv">Criar Evento</a></li>
-                                <li><a class="dropdown-item" href="/editarEv">Editar Evento</a></li>
-                                <li><a class="dropdown-item" href="/meusEv">Meus Eventos</a></li>
-                                <li><a class="dropdown-item  modal-editCadastro">Editar Cadastro</a></li>
-                                <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-
-
-                            <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
-
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> --}}
 
 
     <div id="body-contentEv">
@@ -80,7 +26,7 @@
 
         <section id="mainContentEv">
             <h1>Editar evento</h1>
-            <form action="/cadastroevento" method='post' enctype="multipart/form-data">
+            <form action="/editouEvento" method='post'>
                 <div id="formPlace">
                     <div id="formEv">
                         <div class="divInputs input-group mb-3">
@@ -111,13 +57,12 @@
                         </div>
                         <div id="buttonEv">
                             <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>
-                            <button type="submit" class="btnExcluir btnEv btn btn-outline-danger">Excluir
-                                Evento</button>
                         </div>
                     </div>
 
                 </div>
             </form>
+            <input type="hidden" value="" name="id">
         </section>
 
     </div>

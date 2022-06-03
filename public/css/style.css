@@ -105,7 +105,7 @@ nav .nav-link {
     background-color: rgba(58, 58, 58, 0.589);
     z-index: 4000;
 }
-.container{
+.containerr{
     z-index: 5000;
     position: absolute;
     top: 50%;
@@ -120,7 +120,7 @@ nav .nav-link {
     margin: 0 20px;
 }
 
-.container .forms{
+.containerr .forms{
     display: flex;
     align-items: center;
     height: 440px;
@@ -129,32 +129,32 @@ nav .nav-link {
 }
 
 
-.container .form{
+.containerr .form{
     width: 50%;
     padding: 30px;
     background-color: #fff;
     transition: margin-left 0.18s ease;
 }
 
-.container.active .login{
+.containerr.active .login{
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
-.container .signup{
+.containerr .signup{
     opacity: 0;
     transition: opacity 0.09s ease;
 }
-.container.active .signup{
+.containerr.active .signup{
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
-.container.active .forms{
+.containerr.active .forms{
     height: 600px;
 }
-.container .form .title{
+.containerr .form .title{
     position: relative;
     font-size: 27px;
     font-weight: 600;
@@ -272,7 +272,7 @@ nav .nav-link {
     text-align: center;
 }
 @media only screen and  (max-width: 500px){
-    .container{
+    .containerr{
         z-index: 5000;
         position: absolute;
         top: 49%;
@@ -289,7 +289,7 @@ nav .nav-link {
         margin: 0 20px;
     }
     
-    .container .forms{
+    .containerr .forms{
         display: flex;
         align-items: center;
         height: 440px;
@@ -297,14 +297,14 @@ nav .nav-link {
         transition: height 0.2s ease;
     
     }
-    .container.active .forms{
+    .containerr.active .forms{
         height: 100vh;
     }
     
 }
 
 @media only screen and  (max-width: 350px){
-    .container{
+    .containerr{
         z-index: 5000;
         position: absolute;
         top: 49%;
@@ -321,7 +321,7 @@ nav .nav-link {
         margin: 0 20px;
     }
     
-    .container.active .forms{
+    .containerr.active .forms{
         height: 100vh;
     }
 
@@ -340,52 +340,12 @@ nav .nav-link {
 
 /*================================= PAGINA DE LOGIN (FINAL) ======================================*/
 /*================================= PAGINAS DE EVENTOS (INICIO) ======================================*/
-#body-content{
-    width: 100%;
-    position:relative;
-    padding-bottom: 1%;
-}
-.vertical-menu{
-    position: relative;
-    margin: 2% 0 0 2%;
-    width: 30%;
-    height: 80vh;
-    overflow-y: auto;
-    padding-right: 2vh;
-    padding-left: 0.5vh;
-    display: inline-block;
-}
-#event-title{
-    width: 100%;
-    text-align: center;
-    font-family: 'titin';
-}
-#event-title h2{
-    font-size: 2.3rem;
-    text-shadow: 1px 1px 7px rgba(104, 104, 104, 0.664);
+.hover-Ev:hover{
+    background-color: #00a2ff;
 }
 
-.scroll-area{
-    height: 30vh;
-    width: 100%;
-    background-color: #cfcfcf;
-    margin-top: 2vh;
-    border-radius: 2vh 2vh 2vh 2vh;   
-}
-.scroll-area:hover{
-    box-shadow: 1px 1px 5px 1px rgba(75, 75, 75, 0.747);
-}
-.show-event{
-    position: relative;
-    background-color: #cfcfcf;
-    height: 80vh;
-    width: 65%;
-    display: inline-block;
-    margin-left: 2vh;
-    border-radius: 2vh 2vh 2vh 2vh;
-}
 ::-webkit-scrollbar{
-    width: 1vh;
+    width: 0;
 }
 ::-webkit-scrollbar-track{
     background: rgb(33, 37, 41);
@@ -399,15 +359,7 @@ nav .nav-link {
 ::-webkit-scrollbar-thumb:hover{
     background: #4771e4;
 }
-.main-content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #00a2ff;
-    height: 300px;
-    width: 400px;
-    z-index: 2190;
-}
+
 /*================================= PAGINAS DE EVENTOS (FINAL) ======================================*/
 
 /*================================= SLIDES PAGINA INICIAL ======================================*/

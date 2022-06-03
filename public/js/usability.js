@@ -1,6 +1,6 @@
 const logadoounao = document.getElementById('nav-linkblue').innerText;
 if (logadoounao == '' || logadoounao == "Acesse sua conta") {
-    const container = document.querySelector(".container"),
+    const container = document.querySelector(".containerr"),
         pwShowHide = document.querySelectorAll(".showHidePw"),
         pwFields = document.querySelectorAll(".password"),
         signUp = document.querySelector(".signup-link"),

@@ -51,7 +51,7 @@ exports.cadastrar = async (req, res) => {
         }
         catch(err){
             req.flash("error_msg"," Houve um erro durante a o salvamento do usuário ");
-            res.redirect("/");
+            res.redirect("/",{logadoounao:"Acesse sua conta"});
         }
     }
     //cadastro ---------
@@ -59,7 +59,7 @@ exports.cadastrar = async (req, res) => {
 
 exports.deslogar = function(req, res){
     req.logout();
-    res.redirect('/');
+    res.redirect('/',{logadoounao:"Acesse sua conta"});
 }
 
 
