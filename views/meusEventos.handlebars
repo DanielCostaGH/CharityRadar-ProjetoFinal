@@ -25,7 +25,8 @@
         <section id="mainContentEv">
 
             {{!------------------ Seção utilizada para mostrar os eventos que o usuário possui ----------------}}
-            <div style="height: 100%;" class="container col-12 mx-auto mb-5 bg-light p-5 overflow-auto ">
+            <div style="height: 100%; background-color:rgb(241, 242, 243)"
+                class="container col-12 mx-auto mb-5 p-5 overflow-auto ">
                 <h1 class="my-0 mb-1">Meus eventos</h1>
                 {{#each eventos}}
 
@@ -58,7 +59,19 @@
 
 
                 {{else}}
-                <h3>Nenhum Evento por aqui.</h3>
+                <div class="container">
+                    <div class="row">
+                        
+                            <figure class="text-center mt-5">
+                                <img src="/img/noEvents.svg" class=" img-fluid rounded" alt="...">
+                            </figure>
+
+                            <h3 style="color:rgb(38, 126, 242);" class="text-center ">Voce não pussui Eventos</h3>
+                            
+
+                            
+                    </div>
+                </div>
 
 
                 {{/each}}

@@ -31,6 +31,7 @@
                 <div id="formPlace">
                     <div id="formEv">
                         <div class="divInputs input-group mb-3">
+                            <span class="input-group-text">Nome</span>
                             <input type="text" name='nome' class="form-control inputClass" value="{{name}}">
                             <input type="text" name='numero' class="form-control inputClass" value="{{numero}}"
                                 placeholder="Número para contato (Opicional)">
@@ -53,7 +54,7 @@
                         </div>
                         <div id="inputDesc" class="input-group">
                             <span class="input-group-text">Descrição do evento</span>
-                            <textarea name='descricao' value={{descricao}} id="" class="form-control inputClass"></textarea>
+                            <textarea name='descricao'  id="" class="form-control inputClass">{{descricao}}</textarea>
                         </div>
                         <div id="buttonEv">
                             <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>

@@ -6,6 +6,9 @@ html{
 body {
     background-color: rgb(248, 249, 250);
 }
+h1, h2, h3, h4, h5{
+    font-family: 'titin';
+}
 
 #logo1 {
     height: 10vh;
@@ -62,7 +65,7 @@ nav .nav-link {
 }
 
 .divMain {
-    background-color: rgb(241, 241, 241);
+    background: linear-gradient(90deg, rgba(114, 114, 114, 0.315), rgba(255, 255, 255, 0.582), rgba(114, 114, 114, 0.315))
 }
 
 /*================================= PAGINA DE LOGIN ======================================*/
@@ -942,6 +945,189 @@ thead tr{
 
 
 /*================================= MEUS EVENTOS (INICIO) ======================================*/
+
+/*================================= ANIMAÇÕES (INICIO) ======================================*/
+
+/* spinn (sobre) responsivo (inicio) */
+.cssload-loader * {
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+}
+.cssload-loader {
+	width: 2em;
+	height: 2em;
+	font-size: 225px;
+	position: relative;
+	display:block;
+	margin: 75px auto;
+}
+.cssload-loader:before, .cssload-loader:after {
+	content: "";
+	top: 0;
+	display: block;
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	border-width: 0.5em;
+	border-style: double;
+	border-color: transparent;
+	border-radius: 2em;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	animation: spin 2.05s infinite;
+		-o-animation: spin 2.05s infinite;
+		-ms-animation: spin 2.05s infinite;
+		-webkit-animation: spin 2.05s infinite;
+		-moz-animation: spin 2.05s infinite;
+}
+.cssload-loader:after {
+	left: 0;
+	border-left-color: rgb(255,255,255);
+}
+.cssload-loader:before {
+	right: 0;
+	border-right-color: rgb(255,255,255);
+	animation-delay: -0.51s;
+		-o-animation-delay: -0.51s;
+		-ms-animation-delay: -0.51s;
+		-webkit-animation-delay: -0.51s;
+		-moz-animation-delay: -0.51s;
+}
+@keyframes spin {
+	from {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes spin {
+	from {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes spin {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+
+@media (max-width:700px){
+.cssload-loader * {
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+}
+
+.cssload-loader {
+	width: 1em;
+	height: 1em;
+	font-size: 188px;
+	position: relative;
+	display:block;
+	margin: 63px auto;
+}
+
+.cssload-loader:before, .cssload-loader:after {
+	content: "";
+	top: 0;
+	display: block;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	border-width: 0.5em;
+	border-style: double;
+	border-color: transparent;
+	border-radius: 1em;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	animation: spin 2.05s infinite;
+		-o-animation: spin 2.05s infinite;
+		-ms-animation: spin 2.05s infinite;
+		-webkit-animation: spin 2.05s infinite;
+		-moz-animation: spin 2.05s infinite;
+}
+.cssload-loader:after {
+	left: 0;
+	border-left-color: rgb(255,255,255);
+}
+.cssload-loader:before {
+	right: 0;
+	border-right-color: rgb(255,255,255);
+	animation-delay: -0.51s;
+		-o-animation-delay: -0.51s;
+		-ms-animation-delay: -0.51s;
+		-webkit-animation-delay: -0.51s;
+		-moz-animation-delay: -0.51s;
+}
+@keyframes spin {
+	from {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes spin {
+	from {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes spin {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+}
+}
+/* spinn (sobre) responsivo (final) */
+
+/*================================= ANIMAÇÕES (FINAL) ======================================*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*================================= FOOTER (--) ======================================*/

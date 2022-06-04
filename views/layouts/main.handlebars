@@ -52,18 +52,8 @@
                         <a class="nav-link" href="/#sobreId">sobre</a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Eventos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/eventos">Únicos</a></li>
-                            <li><a class="dropdown-item" href="#">Frequentes</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            <li><a class="dropdown-item" href="/faq">Dúvidas</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventos">Eventos</a>
                     </li>
 
                     <li class="nav-item">
@@ -186,12 +176,7 @@
                     Criar Evento
                 </a>
             </li>
-            <li class="my-3">
-                <a href="/editarEv" class="nav-link link-dark">
-                    <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-credit-card-2-front"></i></h3>
-                    Editar Evento
-                </a>
-            </li>
+            
             <li class="my-3">
                 <a href="/meusEv" class="nav-link link-dark">
                     <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-card-checklist"></i></h3>
@@ -201,7 +186,7 @@
         </ul>
         <div class="d-block p-3 deslogAcc">
             <a href="/deletaCadastro" class="link-dark">
-                <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-box-arrow-right"></i></h3>
+                <h3 class="icon-link d-inline-block mx-2"><i class="bi bi-person-x"></i></h3>
                 <span>Deletar conta</span>
             </a>
         </div>
@@ -265,6 +250,7 @@
   <!-- Rodapé -->
   <footer>
     <div id="footer" class="w-100 container-fluid bg-dark">
+        {{!-- <li><a class="dropdown-item" href="/faq">Dúvidas</a></li> --}}
 
     </div>
   </footer>

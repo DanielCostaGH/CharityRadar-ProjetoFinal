@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Eventos</title>
+    <title>Eventos</title>
 </head>
 
 <body>
-  
-<div class="container-fluid vh-100">
+
+    <div class="container-fluid vh-100">
         <div class="row-fluid">
 
 
@@ -17,86 +17,40 @@
                     <h2 class="text-center text-dark"> Eventos </h2>
                 </div>
                 <div class="my-1 ">
-                    <select class="form-select mx-auto w-50" name="" id="">
-                        <option value="Únicos">Únicos</option>
-                        <option value="Frequentes">Frequentes</option>
-                    </select>
+                    <form action="/eventos" method="get">
+                        <select name="tipo" class="tiposs form-select mx-auto w-50" id="">
+                            <option value="todos" selected>Todos</option>
+                            <option value="unicos">Únicos</option>
+                            <option value="frequentes">Frequentes</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary"></button>
+                    </form>
                 </div>
+                {{!-- <div class="my-1">
+                    <div class="dropdown text-center pt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Eventos
+                        </button>
+                        <ul name="tipo" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item active" value="todos" href="/eventos">Todos</a></li>
+                            <li><a class="dropdown-item" value="unico" href="/eventos">Únicos</a></li>
+                            <li><a class="dropdown-item" value="frequente" href="/eventos">Frequentes</a></li>
+                        </ul>
+                    </div>
+                </div> --}}
 
 
 
                 <!-- CARDS EVENTOS -->
+
                 <div class="row mx-auto">
+                    {{#each}}
                     <div class="col-md-4 col-sm-6 my-2 ">
                         <div class="card text-center">
                             <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Abrir Evento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-2 ">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Abrir Evento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-2 ">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Abrir Evento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-2 ">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Abrir Evento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-2 ">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Abrir Evento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-2 ">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Event title</h5>
-                                <p class="card-text">Endereço do evento</p>
+                                <h5 class="card-title">{{name}}</h5>
+                                <p class="card-text">{{endereco}}</p>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">
                                     Abrir Evento
@@ -106,14 +60,14 @@
                     </div>
 
 
+                    {{else}}
+                    <h3>Nenhum Evento por aqui.</h3>
 
 
-
-
-
-
+                    {{/each}}
 
                 </div>
+
             </div>
 
 
@@ -223,8 +177,8 @@
 
 
 
-                             <!-- {{!-- =============================== IMAGENS ================================== --}} -->
-                             <div class="col-12 px-0">
+                            <!-- {{!-- =============================== IMAGENS ================================== --}} -->
+                            <div class="col-12 px-0">
                                 <div class="">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
