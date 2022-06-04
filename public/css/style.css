@@ -1,6 +1,8 @@
 /* ===== Google Font Import - Poformsins ===== */
 /* CONFIGURAÇÕES GERAIS */
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background-color: rgb(248, 249, 250);
 }
@@ -61,7 +63,6 @@ nav .nav-link {
 
 .divMain {
     background-color: rgb(241, 241, 241);
-    height: 80vh;
 }
 
 /*================================= PAGINA DE LOGIN ======================================*/
@@ -388,60 +389,30 @@ nav .nav-link {
 /*================================= SLIDES PAGINA INICIAL (FINAL) ======================================*/
 
 /*================================= SOBRE (INICIO) ======================================*/
-.secSobre{
-    position: relative;
-    width: 90%;
-    height: 720px;
-    background-color: rgb(255, 255, 255);
-    align-content: space-around;
-    margin: 0 auto;
+
+.txtSobre p{
+    text-align: justify;
+    font-family: Verdana, sans-serif;
 }
-.leftSobre{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: inline-block;
-    padding-top: 5vh;
-    top: 0;
-    left: 0;
-    margin-left: 2%;
-}
-.rightSobre{
-    position: absolute;
-    width: 50%;
-    height: 100%; 
-    display: inline-block;
-    padding-top: 5vh;
-    top: 0;
-    right: 0;
-    margin-right: 2%;
-    
-}
-#imgRadar{
-    height: 35vh;
-    width: 20vw;
-    display: flex;
-    margin: 0 auto;
-    box-shadow: 0 0 15px 2px #333;
-    border-radius: 5vh 5vh;
-}
-#imgGrupo{
-    height: 45vh;
-    width: 40vw;
-    box-shadow: 0 0 15px 2px #333;
-    margin: 0 auto;
-    margin-top: 5vh;
-    border-radius: 5vh 5vh;
-}
-.txtSobre{
-    height: 100%;
-    width: 70%;
+
+.txtSobre h2{
     font-family: 'titin';
 }
 .txtSobre p{
     text-align: justify;
     font-family: Verdana, sans-serif;
     padding-bottom: 2vh;
+}
+
+#imgRadar{
+    height: 35vh;
+    width: 20vw;
+    margin: 0 auto;
+}
+#imgGrupo{
+    height: 45vh;
+    width: 40vw;
+    margin: 0 auto;
 }
 
 
@@ -974,24 +945,10 @@ thead tr{
 
 
 /*================================= FOOTER (--) ======================================*/
-footer p {
-    margin-bottom: 0;
-    color: white
-}
 
-.centerP {
-    text-align: center;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-}
 
-footer {
-    height: 15vh;
-    z-index: 30;
-}
 
 #footer {
-    width: 100%;
-    text-align: center;
+    height: 100px;
 }
 

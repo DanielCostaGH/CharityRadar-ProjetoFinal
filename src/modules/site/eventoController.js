@@ -57,7 +57,7 @@ exports.cadastroevento = function (req, res) {
         descricao: descricao,
         usuario_id: req.user.id
     });
-    res.redirect('/meusEv')
+    res.redirect('/meusEv');
 };
 
 exports.editouEvento = async (req, res) => {
@@ -90,8 +90,7 @@ exports.deletaEvento = async (req, res) => {
     await PostEvent.destroy({
         where: { 'id': req.params.id }
     });
-    res.render('meusEventos',
-        { logadoounao: " Bem vindo " + req.user.nome });
+    res.redirect('/meusEv');
 
 }
 

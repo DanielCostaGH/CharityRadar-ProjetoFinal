@@ -5,113 +5,114 @@
   <title>Charity Radar</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-  
-  <!-- Conteúdo principal -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<body>
 
-    <!-- botões de pagina -->
-    <div class="carousel-indicators">
-      <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-        class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+  <div class="container-fluid">
+    <!-- Conteúdo principal -->
+    <div id="carouselExampleIndicators" class="carousel slide vh-100" data-bs-ride="carousel">
+
+      <!-- botões de pagina -->
+      <div class="carousel-indicators">
+        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+          class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+
+      <!-- slides -->
+      <div class="carousel-inner vh-100">
+        <!-- slide 1 -->
+        <div id="slide1" class="carousel-item active divMain vh-100">
+          <div class="slideBackground">
+            <div class="slideArea">
+              <div id="imgslide1"></div>
+              <div id="imgslide1"></div>
+              <div id="imgslide1"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="carousel-item divMain">
+          <div class="slideBackground">
+            <div class="slideArea">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="carousel-item divMain">
+          <div class="slideBackground">
+            <div class="slideArea">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Setas dos slides -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span id="setaSlide" class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span id="setaSlide" class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-    <!-- slides -->
-    <div class="carousel-inner">
-      <!-- slide 1 -->
-      <div id="slide1" class="carousel-item active divMain">
-        <div class="slideBackground">
-          <div class="slideArea">
-            <div id="imgslide1"></div>
-            <div id="imgslide1"></div>
-            <div id="imgslide1"></div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- slide 2 -->
-      <div class="carousel-item divMain">
-        <div class="slideBackground">
-          <div class="slideArea">
-
-          </div>
-        </div>
-      </div>
-
-      <!-- slide 3 -->
-      <div class="carousel-item divMain">
-        <div class="slideBackground">
-          <div class="slideArea">
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Setas dos slides -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span id="setaSlide" class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span id="setaSlide" class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
   {{!-- SOBRE --}}
-  <section id="sobreId" class="secSobre">
-    <div class="leftSobre">
-      <div class="txtSobre">
+  <section>
+    <div id="sobreId" class="container-fluid bg-secondary text-light h-auto">
+      <div class="row">
+        <div class="col-lg-6 mx-auto px-md-5 px-sm-4 py-5 txtSobre thumbnail">
+          <h2> <i class="bi bi-people-fill"></i> Quem somos</h2>
+          <p>Somos um grupo de estudantes que se juntaram para fazer um típico trabalho de faculdade, neste, tinhamos
+            que
+            desenvolver algum serviço para poder aplicar tudo o que aprendemos no semestre.</p>
+          <h2> <i class="bi bi-card-checklist"></i> O que propomos</h2>
+          <p> Apesar de ser um trabalho estudantil, levantamos a ideia de montar um serviço de centralização de
+            caridade,
+            e
+            não apenas como um projeto
+            para entregar e ganhar pontos, um projeto para nossa vida, um projeto para mudar vidas.</p>
+          <h2> <i class="bi bi-flag-fill"></i> No que acreditamos</h2>
+          <p>Nos dias atuais, a sociedade tem se tornado fria e insensível, principalmente após a pandemia. Apesar
+            disso,
+            nós precisamos buscar nosso lado humano e fazer o bem independente de qualquer
+            futura recompensa. Sempre haverão pessoas passando necessidades mas também pessoas com o coração bom
+            o suficiente para ajudar, portanto, agora tudo que voce precisa é a sua vontade. Oferecemos uma ferramenta
+            simples e eficaz que poderá proporcianar esse encontro e unir a caridade ao necessitado. </p>
 
-        <h2> <i class="bi bi-people-fill"></i> Quem somos</h2>
-        <p>Somos um grupo de estudantes que se juntaram para fazer um típico trabalho de faculdade, neste, tinhamos que
-          desenvolver algum serviço para poder aplicar tudo o que aprendemos no semestre.</p>
-        <h2> <i class="bi bi-card-checklist"></i> O que propomos</h2>
-        <p> Apesar de ser um trabalho estudantil, levantamos a ideia de montar um serviço de centralização de caridade,
-          e
-          não apenas como um projeto
-          para entregar e ganhar pontos, um projeto para nossa vida, um projeto para mudar vidas.</p>
-        <h2> <i class="bi bi-flag-fill"></i> No que acreditamos</h2>
-        <p>Nos dias atuais, a sociedade tem se tornado fria e insensível, principalmente após a pandemia. Apesar disso,
-          nós precisamos buscar nosso lado humano e fazer o bem independente de qualquer
-          futura recompensa. Sempre haverão pessoas passando necessidades mas também pessoas com o coração bom
-          o suficiente para ajudar, portanto, agora tudo que voce precisa é a sua vontade. Oferecemos uma ferramenta
-          simples e eficaz que poderá proporcianar esse encontro e unir a caridade ao necessitado. </p>
+        </div>
+
+
+        <div class="col-lg-6">
+          <figure class="mt-lg-5 mx-auto text-center">
+            <img src="/img/BRANCOtest.svg" class="img-fluid" alt="...">
+          </figure>
+        </div>
       </div>
-    </div>
-
-
-    <div class="rightSobre">
-      <div id="imgRadar"></div>
-      <div id="imgGrupo"></div>
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="mt-auto container-fluid bg-dark d-flex align-items-center">
-
-    <div class="centerP">
-      <p>@copryght Cheryt Radar</p>
-    </div>
-
-  </footer>
-
-  
 
 
 
 
 
 
-      {{!-- ------------------------------------------------------------------------------------ --}}
+
+
+
+  {{!-- ------------------------------------------------------------------------------------ --}}
 </body>
 
 </html>

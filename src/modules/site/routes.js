@@ -14,7 +14,7 @@ SiteRoutes.get('/faq',controller.faq);
 SiteRoutes.post('/cadastroevento', eventoController.cadastroeventoMutterMiddleware, eventoController.cadastroevento);
 SiteRoutes.get('/criarEv',eventoController.criarevento);
 SiteRoutes.get('/meusEv',eventoController.meuseventos);
-SiteRoutes.get('/editarEv/:id',eventoController.editareventos);
+SiteRoutes.get('/editarEv',eventoController.editareventos);
 SiteRoutes.post('/editouEvento',eventoController.editouEvento);
 SiteRoutes.get('/deletaEvento/:id',eventoController.deletaEvento);
 //---------------------------------------------------
