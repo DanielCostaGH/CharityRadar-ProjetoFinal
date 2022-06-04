@@ -17,15 +17,18 @@
                     <h2 class="text-center text-dark"> Eventos </h2>
                 </div>
                 <div class="my-1 ">
-                    <form action="/eventos" method="get">
+                    <form action="/eventos" method="post">
+
                         <select name="tipo" class="tiposs form-select mx-auto w-50" id="">
                             <option value="todos" selected>Todos</option>
-                            <option value="unicos">Únicos</option>
-                            <option value="frequentes">Frequentes</option>
-                        </select>
+                            <option value="unico">Únicos</option>
+                            <option value="frequente">Frequentes</option>
+                        </select> 
                         <button type="submit" class="btn btn-primary"></button>
                     </form>
                 </div>
+
+
                 {{!-- <div class="my-1">
                     <div class="dropdown text-center pt-3">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
@@ -45,7 +48,7 @@
                 <!-- CARDS EVENTOS -->
 
                 <div class="row mx-auto">
-                    {{#each}}
+                    {{#each eventos}}
                     <div class="col-md-4 col-sm-6 my-2 ">
                         <div class="card text-center">
                             <div class="card-body">
@@ -58,34 +61,13 @@
                             </div>
                         </div>
                     </div>
-
-
-                    {{else}}
-                    <h3>Nenhum Evento por aqui.</h3>
-
-
-                    {{/each}}
-
-                </div>
-
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- Modal -->
+{{!-- ----------------------------------------------------------------------------------------------------------------- --}}
+ <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Event Name</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{name}}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -109,8 +91,7 @@
                                     <div id="collapseTwo" class="accordion-collapse collapse show"
                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            O evento ocorrerá no seguinte endereço: <strong>"rua" "bairro"
-                                                "número"</strong>
+                                            O evento ocorrerá no seguinte endereço: <strong>{{endereco}}</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -130,7 +111,7 @@
                                         <div class="accordion-body">
                                             Email: example@example.com
                                             <br>
-                                            Telefone: (31)99999-9999
+                                            Telefone: {{numero}}
                                         </div>
                                     </div>
                                 </div>
@@ -228,6 +209,28 @@
         </div>
     </div>
 
+                
+                    {{else}}
+                    <h3>Nenhum Evento por aqui.</h3>
+
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+   
 
 
 

@@ -7,7 +7,8 @@ const SiteRoutes = Router();
 
 
 SiteRoutes.get('/',controller.inicial);
-SiteRoutes.get('/eventos',controller.eventos);
+SiteRoutes.get('/listaEventos',controller.listaEventos);
+SiteRoutes.post('/eventos',controller.eventos);
 SiteRoutes.get('/faq',controller.faq);
 
 //----- eventos routes---------
