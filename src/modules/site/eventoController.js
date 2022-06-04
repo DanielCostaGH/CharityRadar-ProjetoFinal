@@ -13,9 +13,15 @@ exports.criarevento = (req, res) => {
 
 
 exports.editareventos = (req, res) => {
-    req.body.id = req.params.id;
-    res.render('editarEvento', { logadoounao: " Bem vindo " + req.user.nome });
+    PostEvent.findAll({
+        where: {
+            id: req.params.id
+        },
+        raw: true,
+    }).then(function (evento) {
+        res.render('editarEvento', { evento: evento, logadoounao: " Bem vindo " + req.user.nome });
 
+    });
 }
 
 exports.meuseventos = function (req, res) {
@@ -44,9 +50,9 @@ exports.cadastroevento = function (req, res) {
 
     const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao } = req.body;
 
-    // ======================= junção do endereço (INICIO) =======================
-    const endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
-    // ======================= junção do endereço (FINAL) =======================
+   // ======================= junção do endereço (INICIO) =======================
+   let endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
+   // ======================= junção do endereço (FINAL) =======================
 
     PostEvent.create({
         name: nome,
@@ -62,11 +68,8 @@ exports.cadastroevento = function (req, res) {
 
 exports.editouEvento = async (req, res) => {
 
-    let { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao } = req.body;
+    let { nome, numero, tipo, endereco, descricao } = req.body;
 
-    // ======================= junção do endereço (INICIO) =======================
-    let endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
-    // ======================= junção do endereço (FINAL) =======================
 
     await PostEvent.update({
         name: nome,
@@ -77,11 +80,11 @@ exports.editouEvento = async (req, res) => {
         },
         {
         where: {
-            id: req.body.id 
+            id: req.params.id
         }
 
     }).then(function () {
-        res.render('meusEventos', { logadoounao: " Bem vindo " + req.user.nome });
+        res.redirect('/meusEv');
     });
 
 }

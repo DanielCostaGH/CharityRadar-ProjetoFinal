@@ -26,34 +26,34 @@
 
         <section id="mainContentEv">
             <h1>Editar evento</h1>
-            <form action="/editouEvento" method='post'>
+            {{#each evento}}
+            <form action="/editouEvento/{{id}}" method='post'>
                 <div id="formPlace">
                     <div id="formEv">
                         <div class="divInputs input-group mb-3">
-                            <input type="text" name='nome' class="form-control inputClass" placeholder="Nome do evento">
-                            <input type="text" name='numero' class="form-control inputClass"
+                            <input type="text" name='nome' class="form-control inputClass" value="{{name}}">
+                            <input type="text" name='numero' class="form-control inputClass" value="{{numero}}"
                                 placeholder="Número para contato (Opicional)">
                         </div>
                         <div class="divSelects input-group mb-3">
                             <select name='tipo' class="form-select inputClass">
-                                <option selected>Selecione o tipo de evento</option>
+                                <option selected>{{tipodeevento}}</option>
                                 <option value="unico">Unico</option>
                                 <option value="frequente">Frequente</option>
                             </select>
-                            <select name='cidade' class="form-select inputClass">
+                            {{!-- <select name='cidade' class="form-select inputClass">
                                 <option selected>Selecione a Cidade</option>
                                 <option value="unico">Belo Horizonte</option>
-                            </select>
+                            </select> --}}
                         </div>
                         <div class="divInputs input-group mb-3">
-                            <input name='rua' type="text" class="form-control inputClass"
-                                placeholder="Endereço do evento (Rua, Bairro e número)">
-                            <input type="text" name='bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
-                            <input type="text" name='numerorua' id="numEnd" class="inputClass" placeholder="Número">
+                            <input name='endereco' type="text" value="{{endereco}}" class="form-control inputClass">
+                            {{!-- <input type="text" name='bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
+                            <input type="text" name='numerorua' id="numEnd" class="inputClass" placeholder="Número"> --}}
                         </div>
                         <div id="inputDesc" class="input-group">
                             <span class="input-group-text">Descrição do evento</span>
-                            <textarea name='descricao' id="" class="form-control inputClass"></textarea>
+                            <textarea name='descricao' value={{descricao}} id="" class="form-control inputClass"></textarea>
                         </div>
                         <div id="buttonEv">
                             <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>
@@ -62,10 +62,7 @@
 
                 </div>
             </form>
-
-                <input type="hidden" value="" name="id">
-            
-            
+            {{/each}}
         </section>
 
     </div>
