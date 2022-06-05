@@ -1,5 +1,7 @@
+const bcrypt = require('bcryptjs');
 const PostEvent = require('../../../Banco de Dados/models/PostEvent');
 const uploadImage = require('../../middlewares/uploadimage');
+const PostUser = require('../../../Banco de Dados/models/PostUser');
 const User = require('../../../Banco de Dados/models/db');
 
 

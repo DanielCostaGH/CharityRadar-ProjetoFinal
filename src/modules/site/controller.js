@@ -68,4 +68,3 @@ exports.faq =(req, res) => {
         logadoounao: estaLogado,
     });
 }
-
