@@ -80,3 +80,7 @@ function iniciaModalCadastro(modalCad) {
 const accAcess = document.querySelector('.modal-editCadastro');
 accAcess.addEventListener('click', () =>
     iniciaModalCadastro('modal-edCadastro'));
+
+
+    // ============= funnção de confirmar exclusão de evento ============
+    

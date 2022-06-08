@@ -9,6 +9,7 @@ SiteRoutes.get("/", controller.inicial);
 SiteRoutes.get("/listaEventos", controller.listaEventos);
 SiteRoutes.post("/eventos", controller.eventos);
 SiteRoutes.get("/faq", controller.faq);
+SiteRoutes.get('/modalEventos/:id', controller.modalEventos);
 
 //----- eventos routes---------
 SiteRoutes.post(
