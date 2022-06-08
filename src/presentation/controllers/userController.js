@@ -57,7 +57,7 @@ exports.cadastrar = async (req, res) => {
 
 exports.deslogar = function (req, res) {
   req.logout();
-  res.redirect('/', { logadoounao: "Acesse sua conta" });
+  res.redirect('/');
 }
 
 
