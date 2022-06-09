@@ -1,4 +1,5 @@
 const PostEvent = require("../../main/database/migrations/PostEvent");
+const PostUser = require("../../main/database/migrations/PostUser");
 
 exports.inicial = (req, res) => {
   let estaLogado = "Acesse sua conta";
@@ -43,9 +44,7 @@ exports.eventos = (req, res) => {
 
   let estaLogado = "Acesse sua conta";
   const { tipo } = req.body;
-   console.log(JSON.stringify(req.body.tipo));
-   console.log(req.body.tipo);
-   let tipos = tipo;
+    let tipos = tipo;
   
   if (req.user){
       estaLogado = " Bem vindo " + req.user.nome;

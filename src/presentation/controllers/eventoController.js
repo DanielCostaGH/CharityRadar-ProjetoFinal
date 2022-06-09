@@ -73,8 +73,8 @@ exports.cadastroevento = async (req, res) => {
 
     fs.writeFileSync(`${dirPath}/${capaPath}`, capa.buffer);
     // fs.writeFileSync(`${dirPath}/${imagensPath}`, imagens.buffer);
-
-    await eventoCriado.update({enderecoimagens: capaPath});
+    const pathimage = "/imgEventos/"+eventId+"/"+capaPath;
+    await eventoCriado.update({enderecoimagens: pathimage});
 
     res.redirect('/meusEv');
   }
