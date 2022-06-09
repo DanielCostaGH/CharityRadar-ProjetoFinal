@@ -15,7 +15,8 @@ SiteRoutes.get('/modalEventos/:id', controller.modalEventos);
 SiteRoutes.post(
   "/cadastroevento",
   eventoController.cadastroeventoMutterMiddleware,
-  eventoController.cadastroevento
+  eventoController.cadastroevento,
+  
 );
 SiteRoutes.get("/criarEv", eventoController.criarevento);
 SiteRoutes.get("/meusEv", eventoController.meuseventos);

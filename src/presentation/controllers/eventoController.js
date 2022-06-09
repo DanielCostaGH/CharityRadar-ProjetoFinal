@@ -1,5 +1,8 @@
 const PostEvent = require("../../main/database/migrations/PostEvent");
-const uploadImage = require("../../presentation/middlewares/uploadimage");
+const multer = require("multer");
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+const fs = require("fs");
 
 exports.criarevento = (req, res) => {
   res.render('criarEvento', { logadoounao: " Bem vindo " + req.user.nome });
@@ -35,33 +38,49 @@ exports.meuseventos = function (req, res) {
 
 
 
-exports.cadastroeventoMutterMiddleware = uploadImage.fields([
+exports.cadastroeventoMutterMiddleware = upload.fields([
   { name: "imagemcapa", maxCount: 1 },
-  { name: "imagens", maxCount: 3 }
+  //{ name: "imagens", maxCount: 1 }
 ]);
 
-exports.cadastroevento = function (req, res) {
+exports.cadastroevento = async (req, res) => {
 
   const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao } = req.body;
 
  // ======================= junção do endereço (INICIO) =======================
  let endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
  // ======================= junção do endereço (FINAL) =======================
-
-  PostEvent.create({
+  try{
+    const eventoCriado = await PostEvent.create({
       name: nome,
       numero: numero,
       tipodeevento: tipo,
       endereco: endereco,
-      enderecoimagens: './public/imagensUser',
+      enderecoimagens: "",
       descricao: descricao,
       usuario_id: req.user.id
-  });
+    });
+    const eventId = eventoCriado.getDataValue("id");
+    const dirPath = `${__dirname}/../../../public/imgEventos/${eventId}`;
+    
 
-  setTimeout(function () {
+    fs.mkdirSync(dirPath);
+
+    const capa = req.files['imagemcapa'][0];
+    //const imagens = req.files['imagens'][0];
+    const capaPath = `capa.${capa.originalname.split(".").pop()}`;
+    // const imagensPath = `imagens.${imagens.originalname.split(".").pop()}`;
+
+    fs.writeFileSync(`${dirPath}/${capaPath}`, capa.buffer);
+    // fs.writeFileSync(`${dirPath}/${imagensPath}`, imagens.buffer);
+
+    await eventoCriado.update({enderecoimagens: capaPath});
+
     res.redirect('/meusEv');
-  }, 700);
-  
+  }
+  catch(err){
+    throw err;
+  }
 };
 
 exports.editouEvento = async (req, res) => {
