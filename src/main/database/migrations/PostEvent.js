@@ -39,5 +39,5 @@ User.hasMany(Event, {
 });
 
 //forçar criação de tabela ----
-// Event.sync({force:true});
+//Event.sync({force:true});
 module.exports = Event;

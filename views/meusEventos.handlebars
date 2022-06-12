@@ -34,17 +34,17 @@
                     <div class="card-body">
                         <div class="row d-flex justify-content-between">
 
-                            <div class="col-8">
+                            <div class="col-md-8">
                                 <h5 class="card-title col-8">{{name}}</h5>
                             </div>
-                            <div class="col-2 py-auto">
+                            <div class="col-md-2 py-auto">
                                 <form action="/editarEv/{{id}}" method="get">
                                     <button type="submit" class="btn btn-outline-primary">Editar</button>
                                 </form>
 
 
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-2">
                                 <form action="/deletaEvento/{{id}}" method="get">
                                     <button type="submit" onclick="confirmAction()"
                                         class="btnExcluir btnEv btn btn-outline-danger">Excluir</button>

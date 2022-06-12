@@ -660,9 +660,17 @@ thead tr{
 
 
 
+/* RESPONSIVIDADE MEUS EVENTOS */
+@media (max-width: 768px){
+    #barraLateralEv{
+        display: none;
+    }
+    #mainContentEv{
+        width: 100%;
+    }
+}
 
-
-/*================================= MEUS EVENTOS (INICIO) ======================================*/
+/*================================= MEUS EVENTOS (FINAL) ======================================*/
 
 /*================================= ANIMAÇÕES (INICIO) ======================================*/
 
@@ -855,4 +863,6 @@ thead tr{
 #footer {
     height: 100px;
 }
+
+
 
