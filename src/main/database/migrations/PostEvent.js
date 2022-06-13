@@ -27,6 +27,14 @@ const Event = db.sequelize.define("eventos", {
     type: db.Sequelize.STRING,
     allowNull: false,
   },
+  data: {
+    type: db.Sequelize.STRING,
+    allowNull: false,
+  },
+  hora: {
+    type: db.Sequelize.STRING,
+    allowNull: false,
+  },
 });
 
 Event.belongsTo(User, {
@@ -39,5 +47,5 @@ User.hasMany(Event, {
 });
 
 //forçar criação de tabela ----
-//Event.sync({force:true});
+Event.sync({force:true});
 module.exports = Event;

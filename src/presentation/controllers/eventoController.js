@@ -45,7 +45,7 @@ exports.cadastroeventoMutterMiddleware = upload.fields([
 
 exports.cadastroevento = async (req, res) => {
 
-  const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao } = req.body;
+  const { nome, numero, tipo, rua, cidade, bairro, numerorua, descricao, data, hora } = req.body;
 
  // ======================= junção do endereço (INICIO) =======================
  let endereco = rua + " " + numerorua + ",  " + bairro + ",   " + cidade;
@@ -58,6 +58,8 @@ exports.cadastroevento = async (req, res) => {
       endereco: endereco,
       enderecoimagens: "",
       descricao: descricao,
+      data: data,
+      hora: hora,
       usuario_id: req.user.id
     });
     const eventId = eventoCriado.getDataValue("id");
@@ -85,7 +87,7 @@ exports.cadastroevento = async (req, res) => {
 
 exports.editouEvento = async (req, res) => {
 
-  let { nome, numero, tipo, endereco, descricao } = req.body;
+  const { nome, numero, tipo, endereco, descricao, data, hora } = req.body;
 
 
   await PostEvent.update({
@@ -94,6 +96,8 @@ exports.editouEvento = async (req, res) => {
       tipodeevento: tipo,
       endereco: endereco,
       descricao: descricao,
+      data: data,
+      hora: hora,
       },
       {
       where: {

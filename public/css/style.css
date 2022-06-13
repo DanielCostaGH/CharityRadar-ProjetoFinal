@@ -42,7 +42,11 @@ nav .nav-link {
 }
 
 
-
+@media (max-width:900px){
+    #carouselExampleIndicators{
+        height: 20vh;
+    }
+}
 
 @font-face {
     font-family: 'titin';

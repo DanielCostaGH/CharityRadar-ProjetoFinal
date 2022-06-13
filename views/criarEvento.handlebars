@@ -6,7 +6,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    
+
 
     {{!-- ============================= Conteúdo da pagina ========================= --}}
 
@@ -53,24 +53,32 @@
                             <input type="text" name='bairro' id="bairroEnd" class="inputClass" placeholder="Bairro">
                             <input type="text" name='numerorua' id="numEnd" class="inputClass" placeholder="Número">
                         </div>
-                        <div id="divAnexo" class="input-group mb-3">
-                            <div class="divslabel mb-3">
-                                <label for="formFile" class="form-label">Foto de capa do seu evento</label>
-                                <input class="form-control inputClass" name='imagemcapa' type="file" id="formFile">
-                            </div>
-                            <div class="divslabel mb-3">
-                                <label for="formFileMultiple" class="form-label">Fotos para seu evento anúncio</label>
-                                <input class="form-control inputClass" name='imagens' type="file" id="formFileMultiple"
-                                    multiple>
-                            </div>
-                        </div>
+                        <div id="" class="row bg-white p-2 mx-2">
+                            {{!-- Data para tipo de evento unico --}}
+                            <div class="mb-3 col-6">
+                                <div id="div1" class="divslabel mb-3">
+                                    <label for="formFile" class="form-label">Data do evento</label>
+                                    <input type="input" name="data" class="form-control inputClass"
+                                        placeholder="Exemplo: 00/00/0000">
+                                    <input type="input" name="hora" class="form-control inputClass my-2"
+                                        placeholder="Informar a hora">
+                                </div>
 
-                        <div id="inputDesc" class="input-group">
-                            <span class="input-group-text">Descrição do evento</span>
-                            <textarea name='descricao' id="" class="form-control inputClass"></textarea>
-                        </div>
-                        <div id="buttonEv">
-                            <button type="submit" class="btnEv btn btn-outline-primary">Cadastrar Evento</button>
+                            </div>
+                            <div id="" class="mb-3 col-6">
+                                <div class="divslabel mb-3">
+                                    <label for="formFile" class="form-label">Fotos do Evento</label>
+                                    <input class="form-control inputClass" name='imagemcapa' type="file" id="formFile">
+                                </div>
+                            </div>
+
+                            <div id="inputDesc" class="">
+                                <span class="">Descrição do evento</span>
+                                <textarea name='descricao' id="" class="form-control inputClass"></textarea>
+                            </div>
+                            <div id="buttonEv">
+                                <button type="submit" class="btnEv btn btn-outline-primary">Cadastrar Evento</button>
+                            </div>
                         </div>
                     </div>
 
@@ -93,7 +101,7 @@
 
 
 
-    
+
 </body>
 
 </html>
