@@ -33,42 +33,45 @@
                         <div class="divInputs input-group mb-3">
                             <span class="input-group-text">Nome</span>
                             <input type="text" name='nome' class="form-control inputClass" value="{{name}}">
-                            <input type="text" name='numero' class="form-control inputClass" value="{{numero}}"
-                                placeholder="Número para contato (Opicional)">
+                            <span class="input-group-text">Número</span>
+                            <input type="text" name='numero' class="form-control inputClass" value="{{numero}}">
                         </div>
-                        <div class="divSelects input-group mb-3">
-                            <select name='tipo' class="form-select inputClass">
-                                <option selected>{{tipodeevento}}</option>
-                                <option value="unico">Unico</option>
-                                <option value="frequente">Frequente</option>
-                            </select>
 
-                        </div>
                         <div class="divInputs input-group mb-3">
-                            <input name='endereco' type="text" value="{{endereco}}" class="form-control inputClass">
+                            <span class="input-group-text">Endereço</span>
+                            <input name='rua' type="text" class="form-control inputClass" value="{{endereco}}">
                         </div>
-                        <div id="inputDesc" class="input-group">
-                            <div id="div1" class="divslabel mb-3">
-                                <label for="formFile" class="form-label">Data do evento</label>
-                                <input type="input" name="data" value="{{data}}"  class="form-control inputClass"
-                                    placeholder="Exemplo: 00/00/0000">
-                                <input type="input" name="hora" value="{{hora}}" class="form-control inputClass my-2"
-                                    placeholder="Informar a hora">
+
+                        {{!-- Data para tipo de evento unico --}}
+                        <div class="mb-3 row col-12">
+                            <div class="col-5">
+                                <span class="input-group-text">Data do Evento:</span>
+                                <input type="input" name="data" class="form-control inputClass" value="{{data}}">
                             </div>
-                            <span class="input-group-text">Descrição do evento</span>
-                            <textarea name='descricao' id="" class="form-control inputClass">{{descricao}}</textarea>
+
+                            <div class="col-5">
+                                <span class="input-group-text">Hora do evento:</span>
+                                <input type="input" name="hora" class="form-control inputClass" value="{{hora}}">
+                            </div>
                         </div>
-                        <div id="buttonEv">
-                            <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>
+
+                        <div class="row col-12">
+                            <div id="inputDesc" class="">
+                                <span class="input-group-text">Descrição do evento:</span>
+                                <textarea name='descricao' id="" class="form-control inputClass">{{descricao}}</textarea>
+                            </div>
+                            <div id="buttonEv">
+                                <button type="submit" class="btnEv btn btn-outline-primary">Editar Evento</button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </form>
-            {{/each}}
         </section>
-
     </div>
+
+    {{/each}}
+
 
 
 

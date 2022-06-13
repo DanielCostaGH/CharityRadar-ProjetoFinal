@@ -22,10 +22,13 @@
 
     <div class="container-fluid">
         <div class="row mx-auto vh-85">
-
+            <div class="row text-center">
+                <h2>{{name}}</h2>
+            </div>
 
             <!-- {{!-- =============================== ACORDIONS ================================== --}} -->
-            <div class="col-12 px-0">
+
+            <div class="col-md-8 mx-auto px-0 py-0 my-0">
 
                 <!-- {{!-- ENDEREÇO --}} -->
                 <div class="accordion-item my-2">
@@ -91,12 +94,11 @@
 
 
             <!-- {{!-- =============================== IMAGENS ================================== --}} -->
-            <div class="col-12 px-0">
-                    <div>
-                        <img src='{{enderecoimagens}}' class="img-thumbnail" alt="...">
-                    </div>
-            </div>
 
+            <div class="col-md-10 mx-auto py-3 d-flex justify-content-center">
+                <img id="imgEv" src='{{enderecoimagens}}'
+                    class="img-fluid pt-2 my-0 mx-auto" alt="...">
+            </div>
         </div>
 
 

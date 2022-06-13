@@ -40,7 +40,7 @@ exports.cadastrar = async (req, res) => {
       })
         .then(() => {
           console.log(" Post criado com sucesso ")
-          res.render('inicial', { success_msg: 'Cadastro criado com sucesso' });
+          res.redirect('/');
         }).catch((erro) => {
           req.flash('error_msg', 'Houve um erro , tente novamente ');
           console.log(" Houve um erro: " + erro);
@@ -49,7 +49,7 @@ exports.cadastrar = async (req, res) => {
     }
     catch (err) {
       req.flash("error_msg", " Houve um erro durante a o salvamento do usuário ");
-      res.redirect("/", { logadoounao: "Acesse sua conta" });
+      res.redirect('/');
     }
   }
   //cadastro ---------

@@ -1,12 +1,18 @@
 /* ===== Google Font Import - Poformsins ===== */
 /* CONFIGURAÇÕES GERAIS */
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: rgb(248, 249, 250);
 }
-h1, h2, h3, h4, h5{
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'titin';
 }
 
@@ -30,6 +36,7 @@ nav .nav-link {
     color: rgb(0, 162, 255);
     cursor: pointer;
 }
+
 #nav-linkblue2 {
     color: rgb(0, 162, 255);
     cursor: pointer;
@@ -42,11 +49,6 @@ nav .nav-link {
 }
 
 
-@media (max-width:900px){
-    #carouselExampleIndicators{
-        height: 20vh;
-    }
-}
 
 @font-face {
     font-family: 'titin';
@@ -69,6 +71,7 @@ nav .nav-link {
 }
 
 .divMain {
+    height: 600px;
     background: linear-gradient(90deg, rgba(114, 114, 114, 0.315), rgba(255, 255, 255, 0.582), rgba(114, 114, 114, 0.315))
 }
 
@@ -88,10 +91,11 @@ nav .nav-link {
 .mostrar .modal{
     animation: modal .3s;
 } */
-.modal-container.mostrar{
+.modal-container.mostrar {
     display: flex;
 }
-.fechar{
+
+.fechar {
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     right: 2%;
@@ -100,10 +104,12 @@ nav .nav-link {
     font-weight: bold;
     border: none;
 }
-.fechar:hover{
+
+.fechar:hover {
     color: #4070f4;
 }
-.modal-container{
+
+.modal-container {
     display: none;
     top: 0px;
     left: 0px;
@@ -113,7 +119,8 @@ nav .nav-link {
     background-color: rgba(58, 58, 58, 0.589);
     z-index: 4000;
 }
-.containerr{
+
+.containerr {
     z-index: 5000;
     position: absolute;
     top: 50%;
@@ -128,7 +135,7 @@ nav .nav-link {
     margin: 0 20px;
 }
 
-.containerr .forms{
+.containerr .forms {
     display: flex;
     align-items: center;
     height: 440px;
@@ -137,38 +144,40 @@ nav .nav-link {
 }
 
 
-.containerr .form{
+.containerr .form {
     width: 50%;
     padding: 30px;
     background-color: #fff;
     transition: margin-left 0.18s ease;
 }
 
-.containerr.active .login{
+.containerr.active .login {
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
-.containerr .signup{
+.containerr .signup {
     opacity: 0;
     transition: opacity 0.09s ease;
 }
-.containerr.active .signup{
+
+.containerr.active .signup {
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
-.containerr.active .forms{
+.containerr.active .forms {
     height: 600px;
 }
-.containerr .form .title{
+
+.containerr .form .title {
     position: relative;
     font-size: 27px;
     font-weight: 600;
 }
 
-.form .title::before{
+.form .title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -179,14 +188,14 @@ nav .nav-link {
     border-radius: 25px;
 }
 
-.form .input-field{
+.form .input-field {
     position: relative;
     height: 50px;
     width: 100%;
     margin-top: 30px;
 }
 
-.input-field input{
+.input-field input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -199,11 +208,11 @@ nav .nav-link {
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid){
+.input-field input:is(:focus, :valid) {
     border-bottom-color: #4070f4;
 }
 
-.input-field i{
+.input-field i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -212,54 +221,56 @@ nav .nav-link {
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid) ~ i{
+.input-field input:is(:focus, :valid)~i {
     color: #4070f4;
 }
 
-.input-field i.icon{
+.input-field i.icon {
     left: 0;
 }
-.input-field i.showHidePw{
+
+.input-field i.showHidePw {
     right: 0;
     cursor: pointer;
     padding: 10px;
 }
 
-.form .checkbox-text{
+.form .checkbox-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.checkbox-text .checkbox-content{
+.checkbox-text .checkbox-content {
     display: flex;
     align-items: center;
 }
 
-.checkbox-content input{
+.checkbox-content input {
     margin: 0 8px -2px 4px;
     accent-color: #4070f4;
 }
 
-.form .text{
+.form .text {
     color: #333;
     font-size: 14px;
 }
 
-.form a.text{
+.form a.text {
     color: #4070f4;
     text-decoration: none;
 }
-.form a:hover{
+
+.form a:hover {
     text-decoration: underline;
 }
 
-.form .button{
+.form .button {
     margin-top: 35px;
 }
 
-.form .button input{
+.form .button input {
     border: none;
     color: #fff;
     font-size: 17px;
@@ -271,21 +282,22 @@ nav .nav-link {
     transition: all 0.3s ease;
 }
 
-.button input:hover{
+.button input:hover {
     background-color: #265df2;
 }
 
-.form .login-signup{
+.form .login-signup {
     margin-top: 30px;
     text-align: center;
 }
-@media only screen and  (max-width: 500px){
-    .containerr{
+
+@media only screen and (max-width: 500px) {
+    .containerr {
         z-index: 5000;
         position: absolute;
         top: 49%;
         left: 43%;
-        right:0%;
+        right: 0%;
         transform: translate(-50%, -50%);
         max-width: 350px;
         height: 97%;
@@ -296,28 +308,29 @@ nav .nav-link {
         overflow: hidden;
         margin: 0 20px;
     }
-    
-    .containerr .forms{
+
+    .containerr .forms {
         display: flex;
         align-items: center;
         height: 440px;
         width: 200%;
         transition: height 0.2s ease;
-    
+
     }
-    .containerr.active .forms{
+
+    .containerr.active .forms {
         height: 100vh;
     }
-    
+
 }
 
-@media only screen and  (max-width: 350px){
-    .containerr{
+@media only screen and (max-width: 350px) {
+    .containerr {
         z-index: 5000;
         position: absolute;
         top: 49%;
         left: 43%;
-        right:0%;
+        right: 0%;
         transform: translate(-50%, -50%);
         max-width: 350px;
         height: 97%;
@@ -328,527 +341,584 @@ nav .nav-link {
         overflow: hidden;
         margin: 0 20px;
     }
-    
-    .containerr.active .forms{
+
+    .containerr.active .forms {
         height: 100vh;
     }
 
-    .fechar{
-    background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    border-radius: 1vh 1vh;
-    font-weight: bold;
-    border: none;
-}
+    .fechar {
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        border-radius: 1vh 1vh;
+        font-weight: bold;
+        border: none;
+    }
 }
 
 
 
 /*================================= PAGINA DE LOGIN (FINAL) ======================================*/
 /*================================= PAGINAS DE EVENTOS (INICIO) ======================================*/
-.hover-Ev:hover{
+.hover-Ev:hover {
     background-color: #00a2ff;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: rgb(33, 37, 41);
     border-radius: 100vw;
     margin-block: 0;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #265df2;
     border-radius: 100vw;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #4771e4;
 }
 
-/*================================= PAGINAS DE EVENTOS (FINAL) ======================================*/
-
-/*================================= SLIDES PAGINA INICIAL ======================================*/
-.slideBackground{
-    position: relative;
-    height: 100%;
-    width: 100%;
+#imgEv{
+    max-height: 600px;
 }
 
-
-.slideArea{
-    position: relative;
-    opacity: 0.8;
-    height: 100%;
-    width: 80%;
-    display: flex;
-    margin: 0 auto;
-    filter: none;
-}
-
-#imgslide1{
-    position: relative;
-    height:100%;
-    width:100%;
-}
-/*================================= SLIDES PAGINA INICIAL (FINAL) ======================================*/
-
-/*================================= SOBRE (INICIO) ======================================*/
-
-.txtSobre p{
-    text-align: justify;
-    font-family: Verdana, sans-serif;
-}
-
-.txtSobre h2{
-    font-family: 'titin';
-}
-.txtSobre p{
-    text-align: justify;
-    font-family: Verdana, sans-serif;
-    padding-bottom: 2vh;
-}
-
-#imgRadar{
-    height: 35vh;
-    width: 20vw;
-    margin: 0 auto;
-}
-#imgGrupo{
-    height: 45vh;
-    width: 40vw;
-    margin: 0 auto;
-}
-
-
-
-/*================================= SOBRE (FINAL) ======================================*/
-
-
-
-/*================================= DUVIDAS (INICIO) ======================================*/
-
-.bgFaq{
-    background-color: #1c6fbd;
-}
-
-/*================================= DUVIDAS (FINAL) ======================================*/
-
-/*================================= CRIAR EVENTOS (INICIO) ======================================*/
-/* Barra lateral */
-#body-contentEv{
-    width: 100%;
-    position: relative;
-    height: 720px;
-}
-#barraLateralEv{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 30%;
-    background-color: #267ef2;
-}
-#iconEvent{
-    font-size: 4rem;
-}
-#txt_lateral_Ev{
-    margin: 0 auto;
-    height: 100%;
-    width: 70%;
-    color: whitesmoke;
-    margin-top: 20%;
-    text-align: center;
-}
-#txt_lateral_Ev p{
-    font-size: 1.3rem;
-}
-#txt_lateral_Ev h1{
-    font-size: 2.4rem;
-    font-family: 'titin';
-}
-
-/* Conteudo principal */
-#mainContentEv{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 70%;
-    background-color: rgb(238, 238, 238);
-}
-#mainContentEv h1{
-    color: black;
-    text-align: center;
-    margin-top: 5%;
-    font-size: 3rem;
-    font-family: 'titin';
-}
-#formPlace{
-    height: 75%;
-    width: 90%;
-    
-    margin: 0 auto;
-    padding: 2%;
-}
-.divslabel{
-    width: 98%;
-    position: relative;
-    display:block;
-}
-#divAnexo{
-    background-color: white;
-    padding: 1%;
-    margin: 0 1% 0 1%;
-    width: 98%;
-    border-radius: 10%, 10%, 10%, 10%;
-    border: 1px solid rgb(204, 204, 204);
-}
-#divAnexo div{
-    margin: 0 1% 0 1%;
-}
-.divInputs input{
-    margin: 0 1% 0 1%;
-}
-.divSelects select{
-    margin: 0 1% 0 1%;
-}
-#numEnd{
-    width: 12%;
-    border: none;
-    padding: 1%;
-    border-radius: 10%, 10%, 10%, 10%;
-    border: 1px solid rgb(204, 204, 204);
-}
-#bairroEnd{
-    border: none;
-    padding: 1%;
-    border-radius: 10%, 10%, 10%, 10%;
-    border: 1px solid rgb(204, 204, 204);
-}
-
-.inputClass:hover{
-    box-shadow:0 0 2px 1px #313131;
-    outline: none;
-}
-.inputClass{
-    border-radius: 10%, 10%, 10%, 10%;
-}
-#inputDesc{
-    margin: 0 1% 0 1%;
-    width: 98%;
-}
-#inputDesc textarea{
-    height: 90px;
-}
-#buttonEv{
-    display: flex;
-    justify-content: end;
-    width: 98%;
-    padding-top: 3%;
-}
-.btnEv:focus{
-    box-shadow:0 0 5px 2px #267ef2;
-    outline: none;
-}
-.form-control{
-    resize: none;
-}
-/*================================= CRIAR EVENTOS (FINAL) ======================================*/
-/*================================= EDITAR EVENTOS (INICIO) ======================================*/
-
-#mainContentCev{
-    position: relative;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(238, 238, 238);
-}
-#mainContentCev h1{
-    color: black;
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'titin';
-    margin-top: 0;
-    padding-top: 2%;
-}
-#formPlace{
-    width: 70%;
-}
-
-#buttonCev{
-    display: flex;
-    justify-content: end;
-    width: 98%;
-    padding-top: 3%;
-}
-.btnCev{
-    background-color: #fff;
-}
-.btnCev:focus{
-    box-shadow:0 0 5px 2px #267ef2;
-    outline: none;
-}
-.btnExcluir{
-    margin-left: 5%;
-}
-/*================================= EDITAR EVENTOS (FINAL) ======================================*/
-/*================================= EDITAR CADASTRO (INICIO) ======================================*/
-.modal-header h2{
-    font-family: 'titin';
-    text-align: center;
-}
-
-/*================================= EDITAR CADASTRO (FINAL) ======================================*/
-/*================================= BARRA LATERAL (INICIO) ======================================*/
-.hide{
-    display: none;
-}
-
-.modal-bar .nav-link {
-    padding-bottom: 5px;
-    font-size: 3vh;
-    font-family: 'titin';
-    letter-spacing: 0.1rem;
-}
-.modal-bar span{
-    font-size: 3vh;
-    font-family: 'titin';
-    letter-spacing: 0.1rem;
-}
-.modal-bar .nav-link:hover {
-    background-color: #267ef2;
-    color: #fff;
-}
-#deslogSair a{
-    transition: all ease 0.5s;
-}
-#deslogSair a:hover{
-    background-color: rgb(231, 80, 80);
-    border-radius: 1vh 1vh 1vh 1vh;
-    color: #fff;
-}
-
-.modal-bar.mostrar{
-    display: flex;
-}
-/*================================= BARRA LATERAL (FINAL) ======================================*/
-/*================================= MEUS EVENTOS (INICIO) ======================================*/
-.div-table{
-    margin: 0 auto;
-    width: 80%;
-    height: 500px;
-    overflow-y: auto;
-    border-radius: 1vh 0vh 0vh 1vh;
-    box-shadow:0 0 5px 3px black ;
-}
-thead tr th{
-    text-align: center;
-}
-thead tr{
-    height: 80px;
-}
-
-  tbody tr td{
-    text-align: center;
-    vertical-align:middle;
-  }
-  tbody tr{ 
-      height: 120px;
-  }
-  
-
-
-
-
-
-/* RESPONSIVIDADE MEUS EVENTOS */
-@media (max-width: 768px){
-    #barraLateralEv{
-        display: none;
+/* @media(min-width:900px) {
+    #imgEv {
+        max-width: 900px;
+        max-height:600px;
     }
-    #mainContentEv{
+} */
+    /*================================= PAGINAS DE EVENTOS (FINAL) ======================================*/
+
+    /*================================= SLIDES PAGINA INICIAL ======================================*/
+    .slideBackground {
+        position: relative;
+        height: 100%;
         width: 100%;
     }
-}
-
-/*================================= MEUS EVENTOS (FINAL) ======================================*/
-
-/*================================= ANIMAÇÕES (INICIO) ======================================*/
-
-/* spinn (sobre) responsivo (inicio) */
-.cssload-loader * {
-	box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-}
-.cssload-loader {
-	width: 2em;
-	height: 2em;
-	font-size: 225px;
-	position: relative;
-	display:block;
-	margin: 75px auto;
-}
-.cssload-loader:before, .cssload-loader:after {
-	content: "";
-	top: 0;
-	display: block;
-	width: 2em;
-	height: 2em;
-	position: absolute;
-	border-width: 0.5em;
-	border-style: double;
-	border-color: transparent;
-	border-radius: 2em;
-	box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	animation: spin 2.05s infinite;
-		-o-animation: spin 2.05s infinite;
-		-ms-animation: spin 2.05s infinite;
-		-webkit-animation: spin 2.05s infinite;
-		-moz-animation: spin 2.05s infinite;
-}
-.cssload-loader:after {
-	left: 0;
-	border-left-color: rgb(255,255,255);
-}
-.cssload-loader:before {
-	right: 0;
-	border-right-color: rgb(255,255,255);
-	animation-delay: -0.51s;
-		-o-animation-delay: -0.51s;
-		-ms-animation-delay: -0.51s;
-		-webkit-animation-delay: -0.51s;
-		-moz-animation-delay: -0.51s;
-}
-@keyframes spin {
-	from {
-		transform: rotate(360deg);
-	}
-}
-
-@-o-keyframes spin {
-	from {
-		-o-transform: rotate(360deg);
-	}
-}
-
-@-ms-keyframes spin {
-	from {
-		-ms-transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes spin {
-	from {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
-@-moz-keyframes spin {
-	from {
-		-moz-transform: rotate(360deg);
-	}
-}
 
 
-@media (max-width:700px){
-.cssload-loader * {
-	box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-}
+    .slideArea {
+        position: relative;
+        opacity: 0.8;
+        height: 100%;
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        filter: none;
+    }
 
-.cssload-loader {
-	width: 1em;
-	height: 1em;
-	font-size: 188px;
-	position: relative;
-	display:block;
-	margin: 63px auto;
-}
+    #imgslide1 {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 
-.cssload-loader:before, .cssload-loader:after {
-	content: "";
-	top: 0;
-	display: block;
-	width: 1em;
-	height: 1em;
-	position: absolute;
-	border-width: 0.5em;
-	border-style: double;
-	border-color: transparent;
-	border-radius: 1em;
-	box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	animation: spin 2.05s infinite;
-		-o-animation: spin 2.05s infinite;
-		-ms-animation: spin 2.05s infinite;
-		-webkit-animation: spin 2.05s infinite;
-		-moz-animation: spin 2.05s infinite;
-}
-.cssload-loader:after {
-	left: 0;
-	border-left-color: rgb(255,255,255);
-}
-.cssload-loader:before {
-	right: 0;
-	border-right-color: rgb(255,255,255);
-	animation-delay: -0.51s;
-		-o-animation-delay: -0.51s;
-		-ms-animation-delay: -0.51s;
-		-webkit-animation-delay: -0.51s;
-		-moz-animation-delay: -0.51s;
-}
-@keyframes spin {
-	from {
-		transform: rotate(360deg);
-	}
-}
+    /*================================= SLIDES PAGINA INICIAL (FINAL) ======================================*/
 
-@-o-keyframes spin {
-	from {
-		-o-transform: rotate(360deg);
-	}
-}
+    /*================================= SOBRE (INICIO) ======================================*/
 
-@-ms-keyframes spin {
-	from {
-		-ms-transform: rotate(360deg);
-	}
-}
+    .txtSobre p {
+        text-align: justify;
+        font-family: Verdana, sans-serif;
+    }
 
-@-webkit-keyframes spin {
-	from {
-		-webkit-transform: rotate(360deg);
-	}
-}
+    .txtSobre h2 {
+        font-family: 'titin';
+    }
 
-@-moz-keyframes spin {
-	from {
-		-moz-transform: rotate(360deg);
-	}
-}
-}
-/* spinn (sobre) responsivo (final) */
+    .txtSobre p {
+        text-align: justify;
+        font-family: Verdana, sans-serif;
+        padding-bottom: 2vh;
+    }
 
-/*================================= ANIMAÇÕES (FINAL) ======================================*/
+    #imgRadar {
+        height: 35vh;
+        width: 20vw;
+        margin: 0 auto;
+    }
+
+    #imgGrupo {
+        height: 45vh;
+        width: 40vw;
+        margin: 0 auto;
+    }
 
 
 
+    /*================================= SOBRE (FINAL) ======================================*/
+
+
+
+    /*================================= DUVIDAS (INICIO) ======================================*/
+
+    .bgFaq {
+        background-color: #1c6fbd;
+    }
+
+    /*================================= DUVIDAS (FINAL) ======================================*/
+
+    /*================================= CRIAR EVENTOS (INICIO) ======================================*/
+    /* Barra lateral */
+    #body-contentEv {
+        width: 100%;
+        position: relative;
+        height: 720px;
+    }
+
+    #barraLateralEv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 30%;
+        background-color: #267ef2;
+    }
+
+    #iconEvent {
+        font-size: 4rem;
+    }
+
+    #txt_lateral_Ev {
+        margin: 0 auto;
+        height: 100%;
+        width: 70%;
+        color: whitesmoke;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    #txt_lateral_Ev p {
+        font-size: 1.3rem;
+    }
+
+    #txt_lateral_Ev h1 {
+        font-size: 2.4rem;
+        font-family: 'titin';
+    }
+
+    /* Conteudo principal */
+    #mainContentEv {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70%;
+        background-color: rgb(238, 238, 238);
+    }
+
+    #mainContentEv h1 {
+        color: black;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 3rem;
+        font-family: 'titin';
+    }
+
+    #formPlace {
+        height: 75%;
+        width: 90%;
+
+        margin: 0 auto;
+        padding: 2%;
+    }
+
+    .divslabel {
+        width: 98%;
+        position: relative;
+        display: block;
+    }
+
+    #divAnexo {
+        background-color: white;
+        padding: 1%;
+        margin: 0 1% 0 1%;
+        width: 98%;
+        border-radius: 10%, 10%, 10%, 10%;
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    #divAnexo div {
+        margin: 0 1% 0 1%;
+    }
+
+    .divInputs input {
+        margin: 0 1% 0 1%;
+    }
+
+    .divSelects select {
+        margin: 0 1% 0 1%;
+    }
+
+    #numEnd {
+        width: 12%;
+        border: none;
+        padding: 1%;
+        border-radius: 10%, 10%, 10%, 10%;
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    #bairroEnd {
+        border: none;
+        padding: 1%;
+        border-radius: 10%, 10%, 10%, 10%;
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    .inputClass:hover {
+        box-shadow: 0 0 2px 1px #313131;
+        outline: none;
+    }
+
+    .inputClass {
+        border-radius: 10%, 10%, 10%, 10%;
+    }
+
+    
+
+    #inputDesc textarea {
+        height: 90px;
+    }
+
+    #buttonEv {
+        display: flex;
+        justify-content: end;
+        width: 98%;
+        padding-top: 3%;
+    }
+
+    .btnEv:focus {
+        box-shadow: 0 0 5px 2px #267ef2;
+        outline: none;
+    }
+
+    .form-control {
+        resize: none;
+    }
+
+    /*================================= CRIAR EVENTOS (FINAL) ======================================*/
+    /*================================= EDITAR EVENTOS (INICIO) ======================================*/
+
+    #mainContentCev {
+        position: relative;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(238, 238, 238);
+    }
+
+    #mainContentCev h1 {
+        color: black;
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'titin';
+        margin-top: 0;
+        padding-top: 2%;
+    }
+
+    #formPlace {
+        width: 70%;
+    }
+
+    #buttonCev {
+        display: flex;
+        justify-content: end;
+        width: 98%;
+        padding-top: 3%;
+    }
+
+    .btnCev {
+        background-color: #fff;
+    }
+
+    .btnCev:focus {
+        box-shadow: 0 0 5px 2px #267ef2;
+        outline: none;
+    }
+
+    .btnExcluir {
+        margin-left: 5%;
+    }
+
+    /*================================= EDITAR EVENTOS (FINAL) ======================================*/
+    /*================================= EDITAR CADASTRO (INICIO) ======================================*/
+    .modal-header h2 {
+        font-family: 'titin';
+        text-align: center;
+    }
+
+    /*================================= EDITAR CADASTRO (FINAL) ======================================*/
+    /*================================= BARRA LATERAL (INICIO) ======================================*/
+    .hide {
+        display: none;
+    }
+
+    .modal-bar .nav-link {
+        padding-bottom: 5px;
+        font-size: 3vh;
+        font-family: 'titin';
+        letter-spacing: 0.1rem;
+    }
+
+    .modal-bar span {
+        font-size: 3vh;
+        font-family: 'titin';
+        letter-spacing: 0.1rem;
+    }
+
+    .modal-bar .nav-link:hover {
+        background-color: #267ef2;
+        color: #fff;
+    }
+
+    #deslogSair a {
+        transition: all ease 0.5s;
+    }
+
+    #deslogSair a:hover {
+        background-color: rgb(231, 80, 80);
+        border-radius: 1vh 1vh 1vh 1vh;
+        color: #fff;
+    }
+
+    .modal-bar.mostrar {
+        display: flex;
+    }
+
+    /*================================= BARRA LATERAL (FINAL) ======================================*/
+    /*================================= MEUS EVENTOS (INICIO) ======================================*/
+    .div-table {
+        margin: 0 auto;
+        width: 80%;
+        height: 500px;
+        overflow-y: auto;
+        border-radius: 1vh 0vh 0vh 1vh;
+        box-shadow: 0 0 5px 3px black;
+    }
+
+    thead tr th {
+        text-align: center;
+    }
+
+    thead tr {
+        height: 80px;
+    }
+
+    tbody tr td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    tbody tr {
+        height: 120px;
+    }
+
+
+
+
+
+
+    /* RESPONSIVIDADE MEUS EVENTOS */
+    @media (max-width: 768px) {
+        #barraLateralEv {
+            display: none;
+        }
+
+        #mainContentEv {
+            width: 100%;
+        }
+    }
+
+    /*================================= MEUS EVENTOS (FINAL) ======================================*/
+
+    /*================================= ANIMAÇÕES (INICIO) ======================================*/
+
+    /* spinn (sobre) responsivo (inicio) */
+    .cssload-loader * {
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .cssload-loader {
+        width: 2em;
+        height: 2em;
+        font-size: 225px;
+        position: relative;
+        display: block;
+        margin: 75px auto;
+    }
+
+    .cssload-loader:before,
+    .cssload-loader:after {
+        content: "";
+        top: 0;
+        display: block;
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        border-width: 0.5em;
+        border-style: double;
+        border-color: transparent;
+        border-radius: 2em;
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        animation: spin 2.05s infinite;
+        -o-animation: spin 2.05s infinite;
+        -ms-animation: spin 2.05s infinite;
+        -webkit-animation: spin 2.05s infinite;
+        -moz-animation: spin 2.05s infinite;
+    }
+
+    .cssload-loader:after {
+        left: 0;
+        border-left-color: rgb(255, 255, 255);
+    }
+
+    .cssload-loader:before {
+        right: 0;
+        border-right-color: rgb(255, 255, 255);
+        animation-delay: -0.51s;
+        -o-animation-delay: -0.51s;
+        -ms-animation-delay: -0.51s;
+        -webkit-animation-delay: -0.51s;
+        -moz-animation-delay: -0.51s;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(360deg);
+        }
+    }
+
+    @-o-keyframes spin {
+        from {
+            -o-transform: rotate(360deg);
+        }
+    }
+
+    @-ms-keyframes spin {
+        from {
+            -ms-transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes spin {
+        from {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        from {
+            -moz-transform: rotate(360deg);
+        }
+    }
+
+
+    @media (max-width:700px) {
+        .cssload-loader * {
+            box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .cssload-loader {
+            width: 1em;
+            height: 1em;
+            font-size: 188px;
+            position: relative;
+            display: block;
+            margin: 63px auto;
+        }
+
+        .cssload-loader:before,
+        .cssload-loader:after {
+            content: "";
+            top: 0;
+            display: block;
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            border-width: 0.5em;
+            border-style: double;
+            border-color: transparent;
+            border-radius: 1em;
+            box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            animation: spin 2.05s infinite;
+            -o-animation: spin 2.05s infinite;
+            -ms-animation: spin 2.05s infinite;
+            -webkit-animation: spin 2.05s infinite;
+            -moz-animation: spin 2.05s infinite;
+        }
+
+        .cssload-loader:after {
+            left: 0;
+            border-left-color: rgb(255, 255, 255);
+        }
+
+        .cssload-loader:before {
+            right: 0;
+            border-right-color: rgb(255, 255, 255);
+            animation-delay: -0.51s;
+            -o-animation-delay: -0.51s;
+            -ms-animation-delay: -0.51s;
+            -webkit-animation-delay: -0.51s;
+            -moz-animation-delay: -0.51s;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-o-keyframes spin {
+            from {
+                -o-transform: rotate(360deg);
+            }
+        }
+
+        @-ms-keyframes spin {
+            from {
+                -ms-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes spin {
+            from {
+                -moz-transform: rotate(360deg);
+            }
+        }
+    }
+
+    /* spinn (sobre) responsivo (final) */
+
+    /*================================= ANIMAÇÕES (FINAL) ======================================*/
 
 
 
@@ -860,13 +930,13 @@ thead tr{
 
 
 
-/*================================= FOOTER (--) ======================================*/
 
 
 
-#footer {
-    height: 100px;
-}
+    /*================================= FOOTER (--) ======================================*/
 
 
 
+    #footer {
+        height: 100px;
+    }
