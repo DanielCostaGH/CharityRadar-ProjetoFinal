@@ -7,64 +7,66 @@
 
 <body>
 
-  <div class="container-fluid p-0">
-    <!-- Conteúdo principal -->
-    <div id="carouselExampleIndicators" class="carousel slide h-auto" data-bs-ride="carousel">
+  <!-- Conteúdo principal -->
 
-      <!-- botões de pagina -->
-      <div class="carousel-indicators">
-        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-          class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button id="switchesButtons" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+  <section>
+    <div id="wallp" class="container-fluid p-0 text-center">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- logo -->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img id="logo1" src="/img/logo-preta.png" class="img-fluid" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Barra de navegação -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul id="navbarItems" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li id="nav-link1" class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/#sobreId">sobre</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/listaEventos">Eventos</a>
+                </li>
+
+                <li class="nav-item">
+                  <a id="nav-linkblue" class="nav-link accAcess">{{logadoounao}}</a>
+
+                  <a id="nav-linkblue2" class="nav-link accAcess2 hide" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                    href="#offcanvasExample">{{logadoounao}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="row">
+        <div class="col-12">
+          <h1 class="m-0 pt-5 px-3 text-inicial">Aqui voce pode fazer a diferença!</h1>
+          <a href="/listaEventos" class="btn bgFaq text-light px-5 py-2 mt-5 shadow p-3 mb-5 rounded">
+            <h3>Ver eventos</h3>
+          </a>
+          <div class="arrow bounce mt-md-2 ">
+            <a href="#sobreId">
+              <h6 class="text-dark"><i class="bi bi-arrow-bar-down"></i></h6>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <!-- slides -->
-      <div class="carousel-inner">
-       <!-- slide 1 -->
-        <div id="slide1" class="carousel-item active divMain">
-          <div class="slideBackground">
-            <div class="slideArea">
-
-            </div>
-
-          </div>
-        </div>
-
-        <!-- slide 2 -->
-        <div class="carousel-item divMain">
-          <div class="slideBackground">
-            <div class="">
-
-            </div>
-          </div>
-        </div>
-
-        <!-- slide 3 -->
-        <div class="carousel-item divMain">
-          <div class="slideBackground">
-            <div class="slideArea">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Setas dos slides -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span id="setaSlide" class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span id="setaSlide" class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
+
+  </section>
 
   {{!-- SOBRE --}}
   <section>
@@ -275,12 +277,16 @@
 
 
 
+  <!-- Rodapé -->
+  <footer>
+    <div id="footer" class="w-100 container-fluid bg-dark">
+      {{!-- <li><a class="dropdown-item" href="/faq">Dúvidas</a></li> --}}
+
+    </div>
+  </footer>
 
 
 
-
-
-  {{!-- ------------------------------------------------------------------------------------ --}}
 </body>
 
 </html>
