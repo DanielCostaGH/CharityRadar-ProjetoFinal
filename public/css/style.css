@@ -57,13 +57,16 @@ nav .nav-link {
     font-family: 'titin';
     letter-spacing: 0.2rem;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 1vh 1vh 1vh 1vh;
+    transition: all 0.4s;
 }
 nav .nav-link:hover{
-    border-bottom: 3px solid rgb(0, 162, 255);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.342);
+    /* border-bottom: 3px solid rgb(0, 162, 255); */
 }
 
 #nav-linkblue {
-    color: rgb(0, 119, 255);
+    color: rgb(0, 162, 255);
     cursor: pointer;
 }
 
@@ -101,30 +104,7 @@ nav .nav-link:hover{
     text-shadow: 0px 0px 10px rgb(119, 119, 119);
 }
 
-.bounce {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-}
 
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-30px);
-    }
-
-    60% {
-        transform: translateY(-15px);
-    }
-}
 
 /* RESPONSIVIDADE PAG INICIAL */
 @media (max-width:769px){
@@ -800,6 +780,35 @@ tbody tr {
 /*================================= MEUS EVENTOS (FINAL) ======================================*/
 
 /*================================= ANIMAÇÕES (INICIO) ======================================*/
+/* Down arrow inicial page */
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
 
 /* spinn (sobre) responsivo (inicio) */
 .cssload-loader * {
