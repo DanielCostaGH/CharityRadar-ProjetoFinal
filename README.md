@@ -69,6 +69,7 @@ Leia o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para saber detalhes sobre o no
 - [Arthur Gabriel](https://github.com/Arthur-Gab)
 - [Daniel Francisco](https://github.com/DanielCostaGH)
 - [Arthur Latini](https://github.com/arthurlatini)
+- [Caio Tadeu](https://github.com/CaioTFC)
 
 # Licença
 
