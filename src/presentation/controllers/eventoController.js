@@ -65,18 +65,22 @@ exports.cadastroevento = async (req, res) => {
     const eventId = eventoCriado.getDataValue("id");
     const dirPath = `${__dirname}/../../../public/imgEventos/${eventId}`;
     
-
-    fs.mkdirSync(dirPath);
-
-    const capa = req.files['imagemcapa'][0];
-    //const imagens = req.files['imagens'][0];
-    const capaPath = `capa.${capa.originalname.split(".").pop()}`;
-    // const imagensPath = `imagens.${imagens.originalname.split(".").pop()}`;
-
-    fs.writeFileSync(`${dirPath}/${capaPath}`, capa.buffer);
-    // fs.writeFileSync(`${dirPath}/${imagensPath}`, imagens.buffer);
-    const pathimage = "/imgEventos/"+eventId+"/"+capaPath;
-    await eventoCriado.update({enderecoimagens: pathimage});
+    if(typeof req.imagemcapa === 'undefined'){
+      await eventoCriado.update({enderecoimagens: null});
+    }
+    else{
+      fs.mkdirSync(dirPath);
+      const capa = req.files['imagemcapa'][0];
+      //const imagens = req.files['imagens'][0];
+      const capaPath = `capa.${capa.originalname.split(".").pop()}`;
+      // const imagensPath = `imagens.${imagens.originalname.split(".").pop()}`;
+  
+      fs.writeFileSync(`${dirPath}/${capaPath}`, capa.buffer);
+      // fs.writeFileSync(`${dirPath}/${imagensPath}`, imagens.buffer);
+      const pathimage = "/imgEventos/"+eventId+"/"+capaPath;
+      await eventoCriado.update({enderecoimagens: pathimage});
+    }
+   
 
     res.redirect('/meusEv');
   }
