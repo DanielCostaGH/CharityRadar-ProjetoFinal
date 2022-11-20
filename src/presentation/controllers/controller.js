@@ -18,6 +18,10 @@ exports.modalEventos = (req, res) => {
           id: req.params.id
       },
       raw: true,
+    //   include[{
+    //     model:
+
+    //   }],
   }).then(function (evento) {
       res.render('modalEventos', {evento: evento, layout: false});
 

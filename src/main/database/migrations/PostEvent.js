@@ -21,7 +21,7 @@ const Event = db.sequelize.define("eventos", {
   },
   enderecoimagens: {
     type: db.Sequelize.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   descricao: {
     type: db.Sequelize.STRING,
@@ -47,5 +47,5 @@ User.hasMany(Event, {
 });
 
 //forçar criação de tabela ----
-// Event.sync({force:true});
+//Event.sync({force:true});
 module.exports = Event;
